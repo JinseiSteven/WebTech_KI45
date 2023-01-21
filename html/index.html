@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/content.css">
     <link rel="stylesheet" href="../css/overview.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/cross-animation.css">
 </head>
 <body>
     <div class="flex--row body--wrapper">
@@ -95,7 +97,7 @@
             </div>
         </div>
         <div class="flex--column content-main">
-            <div class="flex--row dash-wrapper">
+            <div class="flex--row dash-wrapper" style="display: none;">
                 <div class="flex--column wrapper--left">
                     <div class="flex--column welcome-header">
                         <span class="header">Hi, Remolo 👋</span>
@@ -145,6 +147,58 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="logsign-container">
+                <ul class="crosses-animation">
+                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
+                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
+                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
+                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
+                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
+                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
+                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
+                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
+                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
+                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
+                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
+                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
+                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
+                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
+                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
+                </ul>
+                <h1>Welcome to Datanose++!</h1>
+                <div class="flex--column login-box">
+                    <h2>Log in to see your personalised overview</h2>
+                    <form action="#" method="post">
+                        <label for="studentNr"><b>Your Student number:</b></label>
+                        <input type="text" class="studentid-input" placeholder="e.g. 13977571" name="studentNr" required>
+
+                        <label for="password"><b>Your Password:</b></label>
+                        <input type="password" placeholder="e.g. Datanose++isTheBest " name="password" required>
+
+                        <button type="submit">Sign in</button>
+                    </form>
+                    <h5>New to Datanose++? <a href="#">Sign up!</a></h5>
+                </div>
+                <div class="flex--column signup-box" style="display: none;">
+                    <h2>Sign up to see your personalised overview</h2>
+                    <form action="#" method="post">
+                        <label for="studentNr"><b>First name:</b></label>
+                        <input type="text" placeholder="e.g. Max" name="studentNr" required>
+                        <label for="studentNr"><b>Last name:</b></label>
+                        <input type="text" placeholder="e.g. Rutte" name="studentNr" required>
+                        <label for="studentNr"><b>Your Student number:</b></label>
+                        <input type="text" class="studentid-input" placeholder="e.g. 13977571" name="studentNr" required>
+
+                        <label for="password"><b>Your Password:</b></label>
+                        <input type="password" placeholder="e.g. Datanose++isTheBest " name="password" required>
+
+                        <button type="submit">Sign up</button>
+                    </form>
+                    <h5>Already have an account? <a href="#">Log in!</a></h5>
+                </div>
+            </div>
+
         </div>
     </div>
 </body>
