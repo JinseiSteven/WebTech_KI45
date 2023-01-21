@@ -1,5 +1,7 @@
 .dash-wrapper {
     gap: 10px;
+    display: none;
+    padding: 20px;
 }
 
 .welcome-header .header {
@@ -36,6 +38,18 @@
     color: var(--main-accent-color);
 }
 
+.picture-box {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-picture {
+    width: 100%;
+    min-width: 190px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
 .profile-data {
     gap: 10px;
 }
@@ -55,7 +69,6 @@
 .avg-gpa-box {
     width: 100%;
     align-items: center;
-    padding: 10px 40px 10px 40px;
     border-radius: 10px;
     background-color: var(--main-component-color);
     color: var(--main-accent-color);

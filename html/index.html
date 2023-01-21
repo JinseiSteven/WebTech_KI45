@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/content.css">
     <link rel="stylesheet" href="../css/overview.css">
     <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/personal-timetable.css">
     <link rel="stylesheet" href="../css/cross-animation.css">
 </head>
 <body>
@@ -17,8 +18,8 @@
             </div>
             <div class="section">
                 <div class="header">Home</div>
-                <div class="flex--column nav-bar--items selected">
-                    <div class="item selected">
+                <div class="flex--column nav-bar--items ">
+                    <div class="item selected" id="dash-wrapper">
                         <svg
                             width="20"
                             height="20"
@@ -46,7 +47,7 @@
                     <div class="section">
                         <div class="header">Options</div>
                         <div class="flex--column nav-bar--items">
-                            <div class="item">
+                            <div class="item" id="personal-timetable">
                                 <svg
                                     width="20"
                                     height="20"
@@ -72,7 +73,7 @@
                                 </svg>
                                 <span href="index.html">Personal timetable</span>
                             </div>
-                            <div class="item">
+                            <div class="item" id="programme-list" style="pointer-events: none;">
                                 <svg
                                     width="25"
                                     height="25"
@@ -91,13 +92,32 @@
                                 </svg>
                                 <span href="index.html">Programme list</span>
                             </div>
+                            <div class="item" id="logsign-wrapper">
+                                <svg
+                                    width="25"
+                                    height="25"
+                                    viewBox="0 0 25 25"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <g clip-path="url(#clip0_100_268)">
+                                        <path d="M19.428 13.4294C19.428 13.4294 16.6946 10.6425 12.928 10.6425C9.24762 10.6425 5.60952 13.4294 5.60952 13.4294L3.56607 12.5764V15.0788C3.8881 15.1883 4.12381 15.4847 4.12381 15.8436C4.12381 16.2061 3.88333 16.5032 3.55655 16.6103L4.16071 18.2954H2.37738L2.9869 16.596C2.69405 16.4716 2.48929 16.1823 2.48929 15.8436C2.48929 15.5121 2.6881 15.23 2.97202 15.1014V12.3282L0 11.0889L13.0768 5.21924L25.0744 11.1627L19.428 13.4294ZM12.7792 12.0544C16.5685 12.0544 18.4256 14.0603 18.4256 14.0603V18.221C18.4256 18.221 16.494 19.7811 12.4821 19.7811C8.47024 19.7811 7.13274 18.221 7.13274 18.221V14.0603C7.13274 14.0603 8.98988 12.0544 12.7792 12.0544ZM12.7048 18.8895C15.331 18.8895 17.4601 18.3567 17.4601 17.7008C17.4601 17.0448 15.331 16.5121 12.7048 16.5121C10.0786 16.5121 7.95 17.0448 7.95 17.7008C7.95 18.3567 10.0786 18.8895 12.7048 18.8895Z" fill="#114455"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_100_268">
+                                            <rect width="25" height="25" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <span href="index.html">Login test</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="flex--column content-main">
-            <div class="flex--row dash-wrapper" style="display: none;">
+            <div class="flex--row content-wrapper dash-wrapper active">
                 <div class="flex--column wrapper--left">
                     <div class="flex--column welcome-header">
                         <span class="header">Hi, Remolo 👋</span>
@@ -105,8 +125,8 @@
                     </div>
                     <div class="flex--row profile--wrapper">
                         <div class="flex--row profile-data-box">
-                            <div class="profile-picture">
-                                <img src="../assets/img/profile-picture1.png" alt="profile picture">
+                            <div class="picture-box">
+                                <img src="../assets/img/profile-picture1.png" class="profile-picture" alt="profile picture">
                             </div>
                             <div class="flex--column profile-data">
                                 <span class="profile-data--name">Remolo</span>
@@ -147,58 +167,153 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="logsign-container">
+            <div class="content-wrapper logsign-wrapper">
                 <ul class="crosses-animation">
-                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
-                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
-                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
-                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
-                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
-                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
-                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
-                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
-                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
-                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
-                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
-                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
-                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
-                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
-                    <li><div class="cross-ver"></div><div class="cross-hor"></div></li>
+                    <li>
+                        <div class="cross-ver"></div>
+                        <div class="cross-hor"></div>
+                    </li>
+                    <li>
+                        <div class="cross-ver"></div>
+                        <div class="cross-hor"></div>
+                    </li>
+                    <li>
+                        <div class="cross-ver"></div>
+                        <div class="cross-hor"></div>
+                    </li>
+                    <li>
+                        <div class="cross-ver"></div>
+                        <div class="cross-hor"></div>
+                    </li>
+                    <li>
+                        <div class="cross-ver"></div>
+                        <div class="cross-hor"></div>
+                    </li>
+                    <li>
+                        <div class="cross-ver"></div>
+                        <div class="cross-hor"></div>
+                    </li>
+                    <li>
+                        <div class="cross-ver"></div>
+                        <div class="cross-hor"></div>
+                    </li>
+                    <li>
+                        <div class="cross-ver"></div>
+                        <div class="cross-hor"></div>
+                    </li>
+                    <li>
+                        <div class="cross-ver"></div>
+                        <div class="cross-hor"></div>
+                    </li>
+                    <li>
+                        <div class="cross-ver"></div>
+                        <div class="cross-hor"></div>
+                    </li>
+                    <li>
+                        <div class="cross-ver"></div>
+                        <div class="cross-hor"></div>
+                    </li>
+                    <li>
+                        <div class="cross-ver"></div>
+                        <div class="cross-hor"></div>
+                    </li>
+                    <li>
+                        <div class="cross-ver"></div>
+                        <div class="cross-hor"></div>
+                    </li>
+                    <li>
+                        <div class="cross-ver"></div>
+                        <div class="cross-hor"></div>
+                    </li>
+                    <li>
+                        <div class="cross-ver"></div>
+                        <div class="cross-hor"></div>
+                    </li>
                 </ul>
-                <h1>Welcome to Datanose++!</h1>
-                <div class="flex--column login-box">
-                    <h2>Log in to see your personalised overview</h2>
-                    <form action="#" method="post">
-                        <label for="studentNr"><b>Your Student number:</b></label>
-                        <input type="text" class="studentid-input" placeholder="e.g. 13977571" name="studentNr" required>
-
-                        <label for="password"><b>Your Password:</b></label>
-                        <input type="password" placeholder="e.g. Datanose++isTheBest " name="password" required>
-
-                        <button type="submit">Sign in</button>
-                    </form>
-                    <h5>New to Datanose++? <a href="#">Sign up!</a></h5>
+                <div class="flex--column login--container">
+                    <h1>Welcome to Datanose++!</h1>
+                    <div class="flex--column login-box">
+                        <h2>Log in to see your personalised overview</h2>
+                        <form action="#" method="post">
+                            <label for="studentNr">
+                                <b>Your Student number:</b>
+                            </label>
+                            <input
+                                type="text"
+                                class="studentid-input"
+                                placeholder="e.g. 13977571"
+                                name="studentNr"
+                                required
+                            >
+                            <label for="password">
+                                <b>Your Password:</b>
+                            </label>
+                            <input
+                                type="password"
+                                placeholder="e.g. Datanose++isTheBest "
+                                name="password"
+                                required
+                            >
+                            <button type="submit">Sign in</button>
+                        </form>
+                        <h5>
+                            New to Datanose++?
+                            <a href="#">Sign up!</a>
+                        </h5>
+                    </div>
                 </div>
                 <div class="flex--column signup-box" style="display: none;">
                     <h2>Sign up to see your personalised overview</h2>
                     <form action="#" method="post">
-                        <label for="studentNr"><b>First name:</b></label>
-                        <input type="text" placeholder="e.g. Max" name="studentNr" required>
-                        <label for="studentNr"><b>Last name:</b></label>
-                        <input type="text" placeholder="e.g. Rutte" name="studentNr" required>
-                        <label for="studentNr"><b>Your Student number:</b></label>
-                        <input type="text" class="studentid-input" placeholder="e.g. 13977571" name="studentNr" required>
-
-                        <label for="password"><b>Your Password:</b></label>
-                        <input type="password" placeholder="e.g. Datanose++isTheBest " name="password" required>
-
+                        <label for="studentNr">
+                            <b>First name:</b>
+                        </label>
+                        <input
+                            type="text"
+                            placeholder="e.g. Max"
+                            name="studentNr"
+                            required
+                        >
+                        <label for="studentNr">
+                            <b>Last name:</b>
+                        </label>
+                        <input
+                            type="text"
+                            placeholder="e.g. Rutte"
+                            name="studentNr"
+                            required
+                        >
+                        <label for="studentNr">
+                            <b>Your Student number:</b>
+                        </label>
+                        <input
+                            type="text"
+                            class="studentid-input"
+                            placeholder="e.g. 13977571"
+                            name="studentNr"
+                            required
+                        >
+                        <label for="password">
+                            <b>Your Password:</b>
+                        </label>
+                        <input
+                            type="password"
+                            placeholder="e.g. Datanose++isTheBest "
+                            name="password"
+                            required
+                        >
                         <button type="submit">Sign up</button>
                     </form>
-                    <h5>Already have an account? <a href="#">Log in!</a></h5>
+                    <h5>
+                        Already have an account?
+                        <a href="#">Log in!</a>
+                    </h5>
                 </div>
             </div>
-
+            <div class="content-wrapper personal-timetable">
+                Hier kan je shit neerzetten ouail
+            </div>
         </div>
     </div>
+    <script src="../js/navHandler.js"></script>
 </body>

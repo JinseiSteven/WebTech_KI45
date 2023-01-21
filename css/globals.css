@@ -38,3 +38,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+.active {
+    display: flex !important;
+}
