@@ -232,82 +232,103 @@
                 </ul>
                 <div class="flex--column login--container">
                     <h1>Welcome to Datanose++!</h1>
-                    <div class="flex--column login-box">
+                    <div class="flex--column login-box" style="display: none;">
                         <h2>Log in to see your personalised overview</h2>
-                        <form action="#" method="post">
-                            <label for="studentNr">
+                        <form action="../php/login-post.php" class="flex--column" method="post">
+                            <label for="studentID">
                                 <b>Your Student number:</b>
                             </label>
                             <input
                                 type="text"
                                 class="studentid-input"
                                 placeholder="e.g. 13977571"
-                                name="studentNr"
+                                name="studentID"
                                 required
                             >
-                            <label for="password">
+                            <label for="pwd">
                                 <b>Your Password:</b>
                             </label>
                             <input
                                 type="password"
                                 placeholder="e.g. Datanose++isTheBest "
-                                name="password"
+                                name="pwd"
                                 required
                             >
-                            <button type="submit">Sign in</button>
+                            <button type="submit" name="submit">Sign in</button>
                         </form>
                         <h5>
                             New to Datanose++?
                             <a href="#">Sign up!</a>
                         </h5>
                     </div>
-                </div>
-                <div class="flex--column signup-box" style="display: none;">
-                    <h2>Sign up to see your personalised overview</h2>
-                    <form action="#" method="post">
-                        <label for="studentNr">
-                            <b>First name:</b>
-                        </label>
-                        <input
-                            type="text"
-                            placeholder="e.g. Max"
-                            name="studentNr"
-                            required
-                        >
-                        <label for="studentNr">
-                            <b>Last name:</b>
-                        </label>
-                        <input
-                            type="text"
-                            placeholder="e.g. Rutte"
-                            name="studentNr"
-                            required
-                        >
-                        <label for="studentNr">
-                            <b>Your Student number:</b>
-                        </label>
-                        <input
-                            type="text"
-                            class="studentid-input"
-                            placeholder="e.g. 13977571"
-                            name="studentNr"
-                            required
-                        >
-                        <label for="password">
-                            <b>Your Password:</b>
-                        </label>
-                        <input
-                            type="password"
-                            placeholder="e.g. Datanose++isTheBest "
-                            name="password"
-                            required
-                        >
-                        <button type="submit">Sign up</button>
-                    </form>
-                    <h5>
-                        Already have an account?
-                        <a href="#">Log in!</a>
-                    </h5>
+                    <div class="flex--column signup-box">
+                        <h2>Sign up to see your personalised overview</h2>
+                        <form action="../php/signup-post.php" class="flex--column" method="post">
+                            <div class="flex--row">
+                                <div class="flex--column">
+                                    <label for="name">
+                                        <b>First name:</b>
+                                    </label>
+                                    <input
+                                        type="text"
+                                        placeholder="e.g. Max"
+                                        name="name"
+                                        required
+                                    >
+                                </div>
+                                <div class="flex--column">
+                                    <label for="surname">
+                                        <b>Last name:</b>
+                                    </label>
+                                    <input
+                                        type="text"
+                                        placeholder="e.g. Rutte"
+                                        name="surname"
+                                        required
+                                    >
+                                </div>
+                            </div>
+                            <label for="studentID">
+                                <b>Your Student number:</b>
+                            </label>
+                            <input
+                                type="text"
+                                class="studentid-input"
+                                placeholder="e.g. 13977571"
+                                name="studentID"
+                                required
+                            >
+                            <div class="flex--row">
+                                <div class="flex--column">
+                                    <label for="pwd">
+                                        <b>Your Password:</b>
+                                    </label>
+                                    <input
+                                        type="pwd"
+                                        placeholder="e.g. Datanose++isTheBest "
+                                        name="pwd"
+                                        required
+                                    >
+                                </div>
+                                <div class="flex--column">
+                                    <label for="pwdrpt">
+                                        <b>Repeat Password:</b>
+                                    </label>
+                                    <input
+                                        type="password"
+                                        placeholder="..."
+                                        name="pwdrpt"
+                                        required
+                                    >
+                                </div>
+                            </div>
+                            <button type="submit" name="submit">Sign up</button>
+                        </form>
+                        <h5>
+                            Already have an account?
+                            <a href="#">Log in!</a>
+                        </h5>
+                    </div>
                 </div>
             </div>
             <div class="content-wrapper personal-timetable">
