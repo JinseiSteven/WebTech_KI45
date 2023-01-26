@@ -8,7 +8,8 @@
 <div class="content-wrapper logsign-wrapper active">
 
     <?php
-        include_once 'cross-anim.php';
+        include_once 'includes/cross-anim.php';
+        include_once "includes/errors.php";
     ?>
 
     <div class="flex--column login--container">

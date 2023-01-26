@@ -15,6 +15,9 @@
  *      Checks whether the submitted signup form is valid.
  *  - check_login($studentID, $pwd) -> None | true
  *      Checks whether the submitted login form is valid.
+ * 
+ *  - already_logged_in() -> true | None
+ *      Checks whether the user is already logged in.
  *  - empty_field($fields) -> None
  *      Checks whether the form has any empty fields.
  *  - invalid_name($name) -> None
@@ -34,6 +37,7 @@ class FormChecker {
 
         $this->adress = "signup.php";
 
+        $this->already_logged_in();
         $this->empty_field(array($name, $studentID, $pwd, $pwdrpt));
         $this->invalid_name($name);
         $this->invalid_id($studentID);
@@ -46,10 +50,19 @@ class FormChecker {
 
         $this->adress = "login.php";
 
+        $this->already_logged_in();
         $this->empty_field(array($studentID, $pwd));
         $this->invalid_id($studentID);
 
         return true;
+    }
+
+
+    public function already_logged_in() {
+        if (isset($_SESSION['userID'])) {
+            $this->redirect("alreadylogged");
+            exit();
+        }
     }
 
 

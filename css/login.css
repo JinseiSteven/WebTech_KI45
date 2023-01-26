@@ -104,3 +104,36 @@
     background-size: 30px 15px;
     background-repeat: no-repeat;
 }
+
+.alert {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    top: 0px;
+    height: 75px;
+    width: 100%;
+    vertical-align: middle;
+    background-color: #cc3a30;
+    opacity: 0.7;
+    z-index: 0;
+}
+
+.closebutton {
+    color: var(--main-component-color);
+    margin-left: auto;
+    font-weight: bold;
+    font-size: 50px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+  
+.closebutton:hover {
+    color: var(--sub-text-color);
+}
+
+.alert p {
+    font-size: 20px;
+    color: var(--main-component-color);
+}

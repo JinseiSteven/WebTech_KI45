@@ -18,8 +18,6 @@
  *      Adds a user to the user database.
  *  - login($studentID, $pwd) -> None
  *      Logs the user in and starts a session.
- *  - already_logged_in() -> true | None
- *      Checks whether the user is already logged in.
  *  - log_out() -> None
  *      Ends the current session.
  */
@@ -43,7 +41,7 @@ class UserHandler
         
         // checking whether the sql-statement preparation succeeds
         if (mysqli_stmt_prepare($stmt, $sql) !== true) {
-            header("location: ../login.php");
+            header("location: ../login.php?error=failedstmt");
             exit();
         }
 
@@ -78,7 +76,7 @@ class UserHandler
         
         // checking whether the sql-statement preparation succeeds
         if (!mysqli_stmt_prepare($stmt, $sql)) {
-            header("location: ../signup.php");
+            header("location: ../signup.php?error=failedstmt");
             exit();
         }
 
@@ -128,14 +126,6 @@ class UserHandler
             exit();
         }
     }
-
-
-    public function already_logged_in() {
-        if (isset($_SESSION['userID'])) {
-            return true;
-        }
-    }
-
 
     public function log_out() {
         session_destroy();

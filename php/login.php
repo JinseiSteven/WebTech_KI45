@@ -2,15 +2,16 @@
     include_once 'layout-head.php';
 
     /* Content for the page below */
+    $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
 ?>
 
 
 <div class="content-wrapper logsign-wrapper active">
 
     <?php
-        include_once 'cross-anim.php';
+        include_once 'includes/cross-anim.php';
+        include_once "includes/errors.php";
     ?>
-
     <div class="flex--column login--container">
         <h1>Welcome to Datanose++!</h1>
         <div class="flex--column login-box">
