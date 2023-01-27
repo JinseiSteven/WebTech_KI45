@@ -1,5 +1,6 @@
 <?php
     session_start();
+    include_once 'db-files/validator.php';
 ?>
 
 <!DOCTYPE html>

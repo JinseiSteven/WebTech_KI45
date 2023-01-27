@@ -1,6 +1,6 @@
 <?php
-    include_once 'db-files/validator.php';
     include_once 'layout-head.php';
+
     /* Content for the page below */
 ?>
 
