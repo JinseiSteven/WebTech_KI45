@@ -1,0 +1,85 @@
+h1 {
+    color:  white;
+    margin-left: 30px;
+    background-color: var(--main-sub-color);
+    border-radius: 10px;
+    display: table;
+    padding: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.phead {
+    color: var(--main-sub-color);
+    margin-left: 30px;
+    margin-bottom: 0px;
+    background-color: white;
+    border-radius: 10px;
+    display: table;
+    padding: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.director {
+    color: var(--main-sub-color);
+    margin-left: 30px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background-color: white;
+    border-radius: 10px;
+    display: table;
+    padding: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+th {
+    background-color: var(--main-sub-color);
+    opacity: 50%;
+    text-align: left;
+    color: white;
+}
+
+th, td {
+    padding: 5px;
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
+}
+
+.bodytable {
+    background-color: white;
+    font-size: small;
+    border-collapse: collapse;
+    border-radius: 10px;
+    border-style: hidden;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+tr:nth-child(odd) {
+    background-color: #eeeeee;
+}
+
+tbody tr:last-of-type {
+    border-bottom: 2px solid var(--main-sub-color);
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+  
+a:visited {
+    text-decoration: none;
+}
+  
+a:hover {
+    text-decoration: none;
+    color: var(--main-sub-color);
+}
+  
+a:active {
+        text-decoration: none;
+    color: var(--main-sub-color);
+}
