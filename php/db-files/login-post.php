@@ -9,6 +9,7 @@ if (isset($_POST["submit"])) {
     // establishing a connection to the database
     require_once "dbh-post.php";
     require_once "userhandler-post.php";
+    require_once "cookiehandler-post.php";
     require_once "checker-post.php";
 
     // checks the submitted fields using the FormChecker class
@@ -18,6 +19,14 @@ if (isset($_POST["submit"])) {
     if ($formchecker->check_login($studentID, $pwd)) {
 
         $userhandler = new UserHandler($conn);
+
+        // if the user clicked the "stay logged in" checkbox, generates cookies
+        if (isset($_POST["remember"])) {
+            $cookiehandler = new CookieHandler($conn);
+            $userdata = $userhandler->get_user_data("usersStudentID", $studentID);
+            $cookiehandler->bake_cookies($userdata["usersID"]);
+        }
+
         $userhandler->login($studentID, $pwd);
     }
 

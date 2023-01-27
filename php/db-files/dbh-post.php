@@ -15,5 +15,6 @@ $conn = mysqli_connect($serverName, $dbUsername, $dbPassword, $dbName);
 
 // if the connection failed, show error message
 if (!$conn) {
+    header("location: ../overview.php");
     die("connection failed: " . mysqli_connect_error());
 }

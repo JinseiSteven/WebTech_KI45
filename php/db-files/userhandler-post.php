@@ -11,7 +11,7 @@
  *  - "conn": An object representing the connection to the database
  *
  *  Methods:
- *  - get_user_data($studentID) -> Array | false
+ *  - get_user_data($key, $data) -> Array | false
  *      gets user data based on their studentID.
  *      Returns an associative array of the data, or "false" if no data exists.
  *  - signup($name, $student-ID, $pwd) -> None
@@ -33,10 +33,10 @@ class UserHandler
     }
 
 
-    public function get_user_data($studentID) {
+    public function get_user_data($key, $value) {
 
         // initialising and preparing the sql-statement, to prevent sql-injections
-        $sql = "SELECT * FROM users WHERE usersStudentID = ?;";
+        $sql = "SELECT * FROM users WHERE " . $key  ." = ?;";
         $stmt = mysqli_stmt_init($this->conn);
         
         // checking whether the sql-statement preparation succeeds
@@ -46,7 +46,7 @@ class UserHandler
         }
 
         // binding the paramaters to the sql-statement and executing it
-        mysqli_stmt_bind_param($stmt, "i", $studentID);
+        mysqli_stmt_bind_param($stmt, "i", $value);
         mysqli_stmt_execute($stmt);
 
         // returning the results in the form of an associative array
@@ -65,7 +65,7 @@ class UserHandler
     public function signup($name, $studentID, $pwd)
     {
         // checking whether the studentID already exists in the database
-        if ($this->get_user_data($studentID) !== false) {
+        if ($this->get_user_data("usersStudentID", $studentID) !== false) {
             header("location: ../signup.php?error=idexists");
             exit();
         }
@@ -73,7 +73,7 @@ class UserHandler
         // initialising and preparing the sql-statement, to prevent sql-injections
         $sql = "INSERT INTO users (usersName, usersStudentID, usersPwd) VALUES (?, ?, ?);";
         $stmt = mysqli_stmt_init($this->conn);
-        
+
         // checking whether the sql-statement preparation succeeds
         if (!mysqli_stmt_prepare($stmt, $sql)) {
             header("location: ../signup.php?error=failedstmt");
@@ -98,7 +98,7 @@ class UserHandler
     {
         
         // checking whether the student-Id exists in the database
-        $userdata = $this->get_user_data($studentID);
+        $userdata = $this->get_user_data("usersStudentID", $studentID);
 
         // if not, redirecting the user to the login page with an error message
         if ($userdata === false) {
@@ -118,7 +118,6 @@ class UserHandler
 
         // else, log the user in and redirect to the overview page
         else {
-            session_start();
             $_SESSION["userID"] = $userdata["usersID"];
             $_SESSION["userStudentID"] = $userdata["usersStudentID"];
             $_SESSION["userName"] = $userdata["usersName"];

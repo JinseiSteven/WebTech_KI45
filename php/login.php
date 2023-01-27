@@ -1,8 +1,7 @@
 <?php
+    include_once 'db-files/validator.php';
     include_once 'layout-head.php';
-
     /* Content for the page below */
-    $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
 ?>
 
 
@@ -36,11 +35,18 @@
                     name="pwd"
                     required
                 >
+                <div class="remember-box flex--row">
+                    <label for="remember">
+                        <b>Stay logged in?</b>
+                    </label>
+                    <input 
+                        type="checkbox" name="remember">
+                </div>
                 <button type="submit" name="submit">Sign in</button>
             </form>
             <h5>
                 New to Datanose++?
-                <a href="register.php">Sign up!</a>
+                <a href="signup.php">Sign up!</a>
             </h5>
         </div>
     </div>

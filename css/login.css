@@ -28,7 +28,7 @@
 }
 
 .login-box {
-    height: 400px;
+    height: 420px;
     width: 300px;
 }
 
@@ -103,6 +103,11 @@
     background-position: 3px 12px;
     background-size: 30px 15px;
     background-repeat: no-repeat;
+}
+
+.remember-box {
+    margin: 10px;
+    font-size: 12px;
 }
 
 .alert {
