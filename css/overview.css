@@ -1,53 +1,49 @@
 .dash-wrapper {
-    gap: 10px;
     display: none;
+}
+
+.dash-wrapper .content-wrapper {
+    gap: 30px;
+
     padding: 20px;
 }
 
-.welcome-header .header {
-    font-size: 32px;
-    font-weight: 600;
-    color: var(--main-accent-color);
-}
-
-.welcome-header .subheader {
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--main-sub-color);
-}
-
 .wrapper--left {
-    gap: 40px;
+    gap: 30px;
 }
 
 .wrapper--right {
-    height: 100vh;
-    gap: 40px;
+    height: 100%;
+    gap: 30px;
 }
 
 .profile--wrapper {
     width: 50vw;
-    gap: 40px;
+    gap: 30px;
 }
 
 .profile--wrapper .profile-data-box {
     width: 100%;
-    padding: 20px;
     border-radius: 10px;
     background-color: var(--main-component-color);
     color: var(--main-accent-color);
 }
 
 .picture-box {
+    width: 250px;
+    height: 315px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    padding-right: 5px;
+    background: linear-gradient(48.71deg, #55AA88 0%, #114455 105.14%);
+    border-radius: 8px 0px 0px 8px;
 }
 
 .profile-picture {
-    width: 100%;
-    min-width: 190px;
-    border-radius: 100%;
-    object-fit: cover;
+    width: 200px;
+    height: 246.37px;
 }
 
 .profile-data {
@@ -57,13 +53,34 @@
 .box--header {
     font-size: 28px;
     font-weight: 600;
+    padding: 20px;
     color: var(--main-sub-color);
 }
 
 .profile-data-box span {
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--main-sub-color);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--main-accent-color);
+    white-space: nowrap;
+
+}
+
+.profile-data-box .light-header {
+    color: var(--divider-bar-color) !important;
+
+}
+
+.profile-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 50px 20px 20px;
+}
+
+.profile-data>div {
+    display: flex;
+    flex-direction: column;
 }
 
 .avg-gpa-box {
@@ -89,14 +106,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     font-size: 48px;
     font-weight: 600;
     color: var(--main-glow-color);
     border: 8px solid var(--main-glow-color);
     border-radius: 100%;
     padding: 40px;
+    margin: 10px;
 }
 
 .courses--box {
@@ -108,17 +126,19 @@
 
 .courses {
     padding: 20px;
-    overflow-x: scroll;
     height: 100%;
     gap: 20px;
+
+
 }
 
 .courses .course {
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     padding: 20px;
     background-color: var(--main-bg-color);
     font-size: 15px;
+    height: 330px;
 }
 
 .course .course--header {
@@ -133,6 +153,7 @@
 }
 
 .course .course-status {
+    margin-top: auto;
     text-align: center;
     width: 100%;
     padding: 10px;
@@ -141,12 +162,29 @@
     color: var(--selected-text-color);
 }
 
-.attendance--box {
+.course .course-code {
+    color: var(--text-color-plain);
+    font-weight: 600;
+}
 
-    margin: 20px;
-    height: 100vh;
-    /*Remove, im lazy */
-    width: 500px;
+.course .student-amount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: var(--text-color-plain);
+    font-weight: 600;
+}
+
+.student-amount img {
+    width: 20px;
+    height: 20px;
+}
+
+.attendance--box {
+    height: 100%;
+
+    width: 30vw;
     padding: 5px;
 
     background-color: var(--main-component-color);
