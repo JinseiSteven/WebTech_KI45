@@ -1,26 +1,15 @@
-<!DOCTYPE html>
-
 <?php
     include_once 'layout-head.php';
 
     /* Content for the page below */
 ?>
 
-<html>
-    <head>
-        <link rel="stylesheet" href="../css/globals.css">
-        <link rel="stylesheet" href="../css/navbar.css">
-        <link rel="stylesheet" href="../css/content.css">
-        <link rel="stylesheet" href="../css/overview.css">
-        <link rel="stylesheet" href="../css/cross-animation.css">
-        <link rel="stylesheet" href="../css/table-styling.css"> 
-    </head>
-
+<div class="programme-wrapper">
     <header>
         <h1>Programme list</h1>
     </header>
-    <body>
-        <div>
+    <ul>
+        <li>
             <h2 class="phead">Graduate School of Informatics</h2> 
             <h4 class="director">Director: dr. Paola Grosso</h4>
             <table class="bodytable">
@@ -102,9 +91,9 @@
                     <td></td>
                 </tr>
             </table>
-        </div>
+        </li>
 
-        <div>
+        <li>
             <h2 class="phead">Graduate School of Life and Earth Sciences</h2> 
             <h4 class="director">Director: dr. J.F. Duivenvoorden</h4>
             <table class="bodytable">
@@ -193,9 +182,9 @@
                     <td>Suman Jugal BSc, Tamar Vis BSc</td>
                 </tr>
             </table>
-        </div>
+        </li>
 
-        <div>
+        <li>
             <h2 class="phead">Graduate School of Sciences</h2> 
             <h4 class="director">Director: dr. J.P. van der Schaar</h4>
             <table class="bodytable">
@@ -256,9 +245,9 @@
                     <td>Radoua Bezzahi</td>
                 </tr>
             </table>
-        </div>
+        </li>
 
-        <div>
+        <li>
             <h2 class="phead">Instituut voor Interdisciplinaire Studies</h2> 
             <h4 class="director">Director: Lucy Wenting</h4>
             <table class="bodytable">
@@ -347,9 +336,9 @@
                     <td>Lotte Mulder MSc, Lotte Mulder MSc, S. Timmerman MSc</td>
                 </tr>
             </table>
-        </div>
+        </li>
 
-        <div>
+        <li>
             <h2 class="phead">College of Sciences</h2> 
             <h4 class="director">Director: dr. Chris Zaal</h4>
             <table class="bodytable">
@@ -466,9 +455,9 @@
                     <td></td>
                 </tr>
             </table>
-        </div>
+        </li>
 
-        <div>
+        <li>
             <h2 class="phead">College of Informatics</h2> 
             <h4 class="director">Director: dr. Jacobijn Sandberg</h4>
             <table class="bodytable">
@@ -550,9 +539,9 @@
                     <td></td>
                 </tr>
             </table>
-        </div>
+        </li>
 
-        <div>
+        <li>
             <h2 class="phead">College of Life Sciences</h2> 
             <h4 class="director">Director: prof. dr. Stanley Brul</h4>
             <table class="bodytable">
@@ -634,11 +623,11 @@
                     <td>Suman Jugal BSc, Tamar Vis BSc</td>
                 </tr>
             </table>
-        </div>
+        </li>
+    </ul>
+</div>
 
 <?php
     include_once 'layout-foot.php';
     
 ?>
-
-</html>

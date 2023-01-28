@@ -1,4 +1,14 @@
-h1 {
+.programme-wrapper {
+    height: 100%;
+    width: 100%;
+    /* overflow-y: scroll !important; */
+}
+
+.programme-wrapper ul {
+    list-style: none;
+}
+
+.programme-wrapper h1 {
     color:  white;
     margin-left: 30px;
     background-color: var(--main-sub-color);
@@ -31,14 +41,14 @@ h1 {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-th {
+.programme-wrapper th {
     background-color: var(--main-sub-color);
     opacity: 50%;
     text-align: left;
     color: white;
 }
 
-th, td {
+.programme-wrapper th, .programme-wrapper td {
     padding: 5px;
     padding-inline-start: 20px;
     padding-inline-end: 20px;
@@ -57,29 +67,29 @@ th, td {
     overflow: hidden;
 }
 
-tr:nth-child(odd) {
+.programme-wrapper tr:nth-child(odd) {
     background-color: #eeeeee;
 }
 
-tbody tr:last-of-type {
+.programme-wrapper tbody tr:last-of-type {
     border-bottom: 2px solid var(--main-sub-color);
 }
 
-a:link {
+.programme-wrapper a:link {
     text-decoration: none;
     color: black;
 }
   
-a:visited {
+.programme-wrapper a:visited {
     text-decoration: none;
 }
   
-a:hover {
+.programme-wrapper a:hover {
     text-decoration: none;
     color: var(--main-sub-color);
 }
   
-a:active {
+.programme-wrapper a:active {
         text-decoration: none;
     color: var(--main-sub-color);
 }
