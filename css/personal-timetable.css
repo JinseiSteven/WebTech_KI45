@@ -1,3 +1,148 @@
 .personal-timetable {
     display: none;
+    flex-direction: column;
+}
+
+.period-index {
+    font-size: 16px !important;
+    gap: 10px;
+}
+
+.period-index #period-select {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    gap: 20px;
+}
+
+.period-content {
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 375px;
+    justify-content: center;
+    padding: 0px 20px 20px 0px;
+
+}
+
+.period-content .week {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 156px;
+    height: 49px;
+    border-radius: 6px;
+    background-color: #F5F6FA;
+    color: var(--main-glow-color);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.week.active {
+    background: var(--main-glow-color);
+    color: var(--selected-text-color);
+}
+
+.timetable-courses {
+    height: 450px;
+}
+
+.timetable-courses img {
+    height: 20px;
+}
+
+.period-index {
+    display: flex;
+    align-items: center;
+}
+
+.courses-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-weight: 600;
+    color: var(--main-accent-color);
+
+}
+
+.calendar-header {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--main-accent-color);
+
+}
+
+#period-indicator {
+    font-size: 18px;
+}
+
+#week-indicator {
+    background-color: var(--main-component-color);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+#week-days-indicator {
+    font-size: 24px;
+}
+
+#year-indicator {
+    font-size: 24px;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+
+}
+
+#calendar-date-headers {
+    background-color: #ADD6BA;
+}
+
+#calendar-date-headers .text {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+th {
+
+    padding: 0;
+    margin: 0;
+    margin-left: -2px;
+    width: 203px;
+    height: 91px;
+}
+
+th #day {
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+th #date {
+    color: #114455;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+tr td {
+    width: 203px;
+    height: 98px;
+}
+
+
+td {
+    border: 1px solid #5AAC74;
 }
