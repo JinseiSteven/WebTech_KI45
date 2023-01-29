@@ -15,6 +15,7 @@ include_once 'db-files/validator.php';
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/personal-timetable.css">
     <link rel="stylesheet" href="../css/cross-animation.css">
+    <link rel="stylesheet" href="../css/table-styling.css"> 
 </head>
 
 <body>
