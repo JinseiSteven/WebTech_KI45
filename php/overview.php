@@ -7,7 +7,7 @@
 <div class="flex--row content-wrapper dash-wrapper active">
     <div class="flex--column wrapper--left">
         <div class="flex--column welcome-header">
-            <span class="header">Hi, Remolo 👋</span>
+            <span class="header">Hi, <?php echo $_SESSION['userName']?> 👋</span>
             <span class="subheader">Welcome back to your personal calendar!</span>
         </div>
         <div class="flex--row profile--wrapper">
@@ -16,7 +16,7 @@
                     <img src="../assets/img/profile-picture1.png" class="profile-picture" alt="profile picture">
                 </div>
                 <div class="flex--column profile-data">
-                    <span class="profile-data--name">Remolo</span>
+                    <span class="profile-data--name"><?php echo $_SESSION['userName']?></span>
                     <span class="profile-data--email">remolovdplasse@gmail.com</span>
                     <span class="profile-data--ec">24 EC</span>
                 </div>

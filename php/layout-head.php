@@ -1,12 +1,6 @@
 <?php
     session_start();
     include_once 'db-files/validator.php';
-
-    // sending users to the login page from pages where login is needed
-    $current_page = basename($_SERVER["PHP_SELF"]); 
-    if ($current_page == "overview.php" && !isset($_SESSION["userID"])) {
-        header("location: login.php");
-    }
 ?>
 
 <!DOCTYPE html>
@@ -124,6 +118,15 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div>
+                <?php
+                    if (validate_login()) {
+                        echo "<form action='db-files/logout-post.php' method='post'>
+                                <input type='submit' name='logout' value='Logout' />
+                              </form>";
+                    }
+                ?>
             </div>
         </div>
         <div class="flex--column content-main">

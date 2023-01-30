@@ -16,7 +16,7 @@ if (isset($_POST["submit"])) {
     $formchecker = new FormChecker();
 
     // if the form succeeds, logs in the user
-    if ($formchecker->check_login($studentID, $pwd)) {
+    if ($formchecker->check_login($studentID, $pwd) === true) {
 
         $userhandler = new UserHandler($conn);
 

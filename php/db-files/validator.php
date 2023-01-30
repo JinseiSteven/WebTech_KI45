@@ -10,6 +10,8 @@ require_once "userhandler-post.php";
  */ 
 function validate_login() {
 
+    global $conn;
+
     // checks if a session already exists
     if (!empty($_SESSION["userID"])) {
         return true;
@@ -26,7 +28,7 @@ function validate_login() {
 
     // returning false if no data can be found
     if ($cookiedata === false) {
-        return true;
+        return false;
     }
 
     // validates random cookie key with database
@@ -52,4 +54,12 @@ function validate_login() {
         $cookiehandler->eat_cookies($cookiedata["userID"]);
         return false;
     }
+}
+
+$loggedin = validate_login();
+
+// sending users to the login page from pages where login is needed
+$current_page = basename($_SERVER["PHP_SELF"]); 
+if ($current_page == "overview.php" && !$loggedin) {
+    header("location: login.php");
 }

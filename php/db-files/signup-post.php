@@ -15,14 +15,14 @@ if (isset($_POST["submit"])) {
     // checks the submitted fields using the FormChecker class
     $formchecker = new FormChecker();
 
-    // if the form succeeds, logs in the user
-    if ($formchecker->check_signup($name, $studentID, $pwd, $pwdrpt)) {
+    // if the form succeeds, signs up the user
+    if ($formchecker->check_signup($name, $studentID, $pwd, $pwdrpt) === true) {
 
         $userhandler = new UserHandler($conn);
         $userhandler->signup($name, $studentID, $pwd);
     }
 
-    // else, redirects to the login page
+    // else, redirects to the signup page (also in case an error occurs)
     else {
         header("location: ../signup.php");
         exit();

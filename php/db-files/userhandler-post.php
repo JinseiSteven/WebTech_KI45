@@ -18,8 +18,6 @@
  *      Adds a user to the user database.
  *  - login($studentID, $pwd) -> None
  *      Logs the user in and starts a session.
- *  - log_out() -> None
- *      Ends the current session.
  */
 class UserHandler
 {
@@ -88,8 +86,8 @@ class UserHandler
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
 
-        // redirecting the user to the overview page
-        header("location: ../overview.php");
+        // redirecting the user to the login page
+        header("location: ../login.php");
         exit();
     }
 
@@ -118,18 +116,12 @@ class UserHandler
 
         // else, log the user in and redirect to the overview page
         else {
+            session_start();
             $_SESSION["userID"] = $userdata["usersID"];
             $_SESSION["userStudentID"] = $userdata["usersStudentID"];
             $_SESSION["userName"] = $userdata["usersName"];
             header("location: ../overview.php");
             exit();
         }
-    }
-
-    public function log_out() {
-        session_destroy();
-        unset($_SESSION['userID']);
-        unset($_SESSION['userStudentID']);
-        unset($_SESSION['userName']);
     }
 }
