@@ -4,6 +4,9 @@
     background-color: var(--main-component-color);
 }
 
+.nav-bar a {
+    text-decoration: none;
+}
 
 .nav-bar>div {
     padding: 10px;

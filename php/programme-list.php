@@ -797,12 +797,5 @@ include_once 'layout-head.php';
 
     <?php
     include_once 'layout-foot.php';
-<<<<<<< HEAD
-
-    ?>
-
-</html>
-=======
     
 ?>
->>>>>>> 7b37184bb0576d8b872519a92840150dfa2d3eb2
