@@ -2,10 +2,10 @@
 
 // first check whether the user has correctly posted the form
 if (isset($_POST["submit"])) {
-    $name = $_POST["name"] . " " . $_POST["surname"];
-    $studentID = $_POST["studentID"];
-    $pwd = $_POST["pwd"];
-    $pwdrpt = $_POST["pwdrpt"];
+    $name = strip_tags($_POST["name"] . " " . $_POST["surname"]);
+    $studentID = strip_tags($_POST["studentID"]);
+    $pwd = strip_tags($_POST["pwd"]);
+    $pwdrpt = strip_tags($_POST["pwdrpt"]);
 
     // establishing a connection to the database
     require_once "dbh-post.php";

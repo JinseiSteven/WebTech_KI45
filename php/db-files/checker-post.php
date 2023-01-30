@@ -26,6 +26,9 @@
  *      Checks whether the submitted id consists of only numbers.
  *  - pwd_match($pwd, $pwdrpt) -> None
  *      Checks whether the password and repeat password match.
+ *  - pwd_strength($pwd) -> None
+ *      Checks whether the users password contains at least 1 digit and
+ *      is longer than 8 characters.
  *  - redirect($message) -> None
  *      Redirects the user to a page with an error message.
  */
@@ -41,6 +44,7 @@ class FormChecker {
         $this->empty_field(array($name, $studentID, $pwd, $pwdrpt));
         $this->invalid_name($name);
         $this->invalid_id($studentID);
+        $this->pwd_strength($pwd);
         $this->pwd_match($pwd, $pwdrpt);
         
         return true;
@@ -99,6 +103,12 @@ class FormChecker {
         if ($pwd !== $pwdrpt) {
             $this->redirect("pwdmatch");
             exit();
+        }
+    }
+
+    public function pwd_strength($pwd) {
+        if (strlen($pwd) < 8 || !preg_match("#[0-9]+#", $pwd)) {
+            $this->redirect("pwdstrength");
         }
     }
 

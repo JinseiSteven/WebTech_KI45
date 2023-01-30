@@ -3,8 +3,8 @@
 // first check whether the user has correctly posted the form
 if (isset($_POST["submit"])) {
 
-    $studentID = $_POST["studentID"];
-    $pwd = $_POST["pwd"];
+    $studentID = strip_tags($_POST["studentID"]);
+    $pwd = strip_tags($_POST["pwd"]);
 
     // establishing a connection to the database
     require_once "dbh-post.php";
