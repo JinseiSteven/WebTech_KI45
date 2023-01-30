@@ -10,7 +10,7 @@ include_once 'layout-head.php';
     </header>
     <ul>
         <li>
-            <h2 class="phead">Graduate School of Informatics</h2> 
+            <h2 class="phead">Graduate School of Informatics</h2>
             <h4 class="director">Director: dr. Paola Grosso</h4>
             <table class="bodytable">
                 <tr>
@@ -94,7 +94,7 @@ include_once 'layout-head.php';
         </li>
 
         <li>
-            <h2 class="phead">Graduate School of Life and Earth Sciences</h2> 
+            <h2 class="phead">Graduate School of Life and Earth Sciences</h2>
             <h4 class="director">Director: dr. J.F. Duivenvoorden</h4>
             <table class="bodytable">
                 <tr>
@@ -185,7 +185,7 @@ include_once 'layout-head.php';
         </li>
 
         <li>
-            <h2 class="phead">Graduate School of Sciences</h2> 
+            <h2 class="phead">Graduate School of Sciences</h2>
             <h4 class="director">Director: dr. J.P. van der Schaar</h4>
             <table class="bodytable">
                 <tr>
@@ -248,7 +248,7 @@ include_once 'layout-head.php';
         </li>
 
         <li>
-            <h2 class="phead">Instituut voor Interdisciplinaire Studies</h2> 
+            <h2 class="phead">Instituut voor Interdisciplinaire Studies</h2>
             <h4 class="director">Director: Lucy Wenting</h4>
             <table class="bodytable">
                 <tr>
@@ -339,7 +339,7 @@ include_once 'layout-head.php';
         </li>
 
         <li>
-            <h2 class="phead">College of Sciences</h2> 
+            <h2 class="phead">College of Sciences</h2>
             <h4 class="director">Director: dr. Chris Zaal</h4>
             <table class="bodytable">
                 <tr>
@@ -393,9 +393,9 @@ include_once 'layout-head.php';
                 </tr>
                 <tr>
                     <td>Exchange</td>
-                    <td><a href="">	Exchange Programme Faculty of Science</a></td>
+                    <td><a href=""> Exchange Programme Faculty of Science</a></td>
                     <td>prof. dr. L. Kaper</td>
-                    <td>	S. Kujundzic, Irene Verkist Perez</td>
+                    <td> S. Kujundzic, Irene Verkist Perez</td>
                     <td></td>
                 </tr>
                 <tr>
@@ -421,8 +421,8 @@ include_once 'layout-head.php';
                 </tr>
                 <tr>
                     <td>Min NAT</td>
-                    <td><a href="">	Minor Natuurkunde en Sterrenkunde: Advanced Physics</a></td>
-                    <td> Physics	prof. dr. A.L. Wattst</td>
+                    <td><a href=""> Minor Natuurkunde en Sterrenkunde: Advanced Physics</a></td>
+                    <td> Physics prof. dr. A.L. Wattst</td>
                     <td>Joris Peters, Marije Kaan MSc</td>
                     <td>Radoua Bezzahi</td>
                 </tr>
@@ -435,7 +435,7 @@ include_once 'layout-head.php';
                 </tr>
                 <tr>
                     <td>Min NPL</td>
-                    <td><a href="">Minor Natuurkunde en Sterrenkunde: Physics of Life	</a></td>
+                    <td><a href="">Minor Natuurkunde en Sterrenkunde: Physics of Life </a></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -458,7 +458,7 @@ include_once 'layout-head.php';
         </li>
 
         <li>
-            <h2 class="phead">College of Informatics</h2> 
+            <h2 class="phead">College of Informatics</h2>
             <h4 class="director">Director: dr. Jacobijn Sandberg</h4>
             <table class="bodytable">
                 <tr>
@@ -542,7 +542,7 @@ include_once 'layout-head.php';
         </li>
 
         <li>
-            <h2 class="phead">College of Life Sciences</h2> 
+            <h2 class="phead">College of Life Sciences</h2>
             <h4 class="director">Director: prof. dr. Stanley Brul</h4>
             <table class="bodytable">
                 <tr>
@@ -556,14 +556,14 @@ include_once 'layout-head.php';
                     <td>B-alg</td>
                     <td><a href="">Biologie/bio-medisch (algemeen)</a></td>
                     <td>prof. dr. Stanley Brul</td>
-                    <td>	drs. E.M. Boerboom-Schuurmans, Anne Klomp, drs. M.H.E. Bergmans</td>
+                    <td> drs. E.M. Boerboom-Schuurmans, Anne Klomp, drs. M.H.E. Bergmans</td>
                     <td>Suman Jugal BSc, Tamar Vis BSc</td>
                 </tr>
                 <tr>
                     <td>BSc B</td>
                     <td><a href="">Bachelor Biologie</a></td>
                     <td>dr. Hans Breeuwer</td>
-                    <td>	Anne Klomp, drs. M.H.E. Bergmans, Sarah Meijer</td>
+                    <td> Anne Klomp, drs. M.H.E. Bergmans, Sarah Meijer</td>
                     <td>Suman Jugal BSc, Tamar Vis BSc</td>
                 </tr>
                 <tr>
@@ -603,7 +603,7 @@ include_once 'layout-head.php';
                 </tr>
                 <tr>
                     <td>Min BMS</td>
-                    <td><a href="">	Minor Biomedical Sciences: From basic biology to booming business</a></td>
+                    <td><a href=""> Minor Biomedical Sciences: From basic biology to booming business</a></td>
                     <td>dr. Renée van Amerongen</td>
                     <td>drs. E.M. Boerboom-Schuurmans, drs. M.H.E. Bergmans, prof. dr. Stanley Brul</td>
                     <td>Suman Jugal BSc, Tamar Vis BSc</td>
@@ -627,175 +627,91 @@ include_once 'layout-head.php';
     </ul>
 </div>
 
-    <div>
-        <h2 class="phead">College of Informatics</h2>
-        <h4 class="director">Director: dr. Jacobijn Sandberg</h4>
-        <table class="bodytable">
-            <tr>
-                <th>Code</th>
-                <th>Name</th>
-                <th>Program director</th>
-                <th>Coordinator</th>
-                <th>Assistent coordinator</th>
-            </tr>
-            <tr>
-                <td>BSc IK</td>
-                <td><a href="">Bachelor Informatiekunde</a></td>
-                <td>dr. S. van Splunter</td>
-                <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
-                <td>Eline Groot</td>
-            </tr>
-            <tr>
-                <td>BSc IN</td>
-                <td><a href="">Bachelor Informatica</a></td>
-                <td>dr. Zhiming Zhao</td>
-                <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
-                <td>Eline Groot</td>
-            </tr>
-            <tr>
-                <td>BSc KI</td>
-                <td><a href="">Bachelor Kunstmatige Intelligentie</a></td>
-                <td>prof. dr. C. Monz</td>
-                <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
-                <td>Eline Groot</td>
-            </tr>
-            <tr>
-                <td>CoI-alg</td>
-                <td><a href="">College of Informatics (algemeen)</a></td>
-                <td>H.L. Dekkers</td>
-                <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Min AI</td>
-                <td><a href="">Minor Artificial Intelligence</a></td>
-                <td></td>
-                <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
-                <td>Eline Groot</td>
-            </tr>
-            <tr>
-                <td>Min CS</td>
-                <td><a href="">Minor Computational Science</a></td>
-                <td>dr. Rick Quax</td>
-                <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
-                <td>Eline Groot</td>
-            </tr>
-            <tr>
-                <td>Min IN</td>
-                <td><a href="">Minor Informatica</a></td>
-                <td>dr. Zhiming Zhao</td>
-                <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
-                <td>Eline Groot</td>
-            </tr>
-            <tr>
-                <td>Min KI</td>
-                <td><a href="">Minor Kunstmatige Intelligentie</a></td>
-                <td>dr. Ilia Markov</td>
-                <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
-                <td>Eline Groot</td>
-            </tr>
-            <tr>
-                <td>Min Prog</td>
-                <td><a href="">Minor Programmeren</a></td>
-                <td>H.L. Dekkers</td>
-                <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
-                <td>Eline Groot</td>
-            </tr>
-            <tr>
-                <td>Min SciProg</td>
-                <td><a href="">Minor Scientific Programming</a></td>
-                <td>H.L. Dekkers</td>
-                <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
-                <td></td>
-            </tr>
-        </table>
-    </div>
+<div>
+    <h2 class="phead">College of Informatics</h2>
+    <h4 class="director">Director: dr. Jacobijn Sandberg</h4>
+    <table class="bodytable">
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Program director</th>
+            <th>Coordinator</th>
+            <th>Assistent coordinator</th>
+        </tr>
+        <tr>
+            <td>BSc IK</td>
+            <td><a href="">Bachelor Informatiekunde</a></td>
+            <td>dr. S. van Splunter</td>
+            <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
+            <td>Eline Groot</td>
+        </tr>
+        <tr>
+            <td>BSc IN</td>
+            <td><a href="">Bachelor Informatica</a></td>
+            <td>dr. Zhiming Zhao</td>
+            <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
+            <td>Eline Groot</td>
+        </tr>
+        <tr>
+            <td>BSc KI</td>
+            <td><a href="">Bachelor Kunstmatige Intelligentie</a></td>
+            <td>prof. dr. C. Monz</td>
+            <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
+            <td>Eline Groot</td>
+        </tr>
+        <tr>
+            <td>CoI-alg</td>
+            <td><a href="">College of Informatics (algemeen)</a></td>
+            <td>H.L. Dekkers</td>
+            <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Min AI</td>
+            <td><a href="">Minor Artificial Intelligence</a></td>
+            <td></td>
+            <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
+            <td>Eline Groot</td>
+        </tr>
+        <tr>
+            <td>Min CS</td>
+            <td><a href="">Minor Computational Science</a></td>
+            <td>dr. Rick Quax</td>
+            <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
+            <td>Eline Groot</td>
+        </tr>
+        <tr>
+            <td>Min IN</td>
+            <td><a href="">Minor Informatica</a></td>
+            <td>dr. Zhiming Zhao</td>
+            <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
+            <td>Eline Groot</td>
+        </tr>
+        <tr>
+            <td>Min KI</td>
+            <td><a href="">Minor Kunstmatige Intelligentie</a></td>
+            <td>dr. Ilia Markov</td>
+            <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
+            <td>Eline Groot</td>
+        </tr>
+        <tr>
+            <td>Min Prog</td>
+            <td><a href="">Minor Programmeren</a></td>
+            <td>H.L. Dekkers</td>
+            <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
+            <td>Eline Groot</td>
+        </tr>
+        <tr>
+            <td>Min SciProg</td>
+            <td><a href="">Minor Scientific Programming</a></td>
+            <td>H.L. Dekkers</td>
+            <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
+            <td></td>
+        </tr>
+    </table>
+</div>
 
-    <div>
-        <h2 class="phead">College of Life Sciences</h2>
-        <h4 class="director">Director: prof. dr. Stanley Brul</h4>
-        <table class="bodytable">
-            <tr>
-                <th>Code</th>
-                <th>Name</th>
-                <th>Program director</th>
-                <th>Coordinator</th>
-                <th>Assistent coordinator</th>
-            </tr>
-            <tr>
-                <td>B-alg</td>
-                <td><a href="">Biologie/bio-medisch (algemeen)</a></td>
-                <td>prof. dr. Stanley Brul</td>
-                <td> drs. E.M. Boerboom-Schuurmans, Anne Klomp, drs. M.H.E. Bergmans</td>
-                <td>Suman Jugal BSc, Tamar Vis BSc</td>
-            </tr>
-            <tr>
-                <td>BSc B</td>
-                <td><a href="">Bachelor Biologie</a></td>
-                <td>dr. Hans Breeuwer</td>
-                <td> Anne Klomp, drs. M.H.E. Bergmans, Sarah Meijer</td>
-                <td>Suman Jugal BSc, Tamar Vis BSc</td>
-            </tr>
-            <tr>
-                <td>BSc BMW</td>
-                <td><a href="">Bachelor Biomedische Wetenschappen</a></td>
-                <td>prof. dr. Stanley Brul</td>
-                <td>drs. E.M. Boerboom-Schuurmans, Sarah Meijer</td>
-                <td>Suman Jugal BSc, Tamar Vis BSc</td>
-            </tr>
-            <tr>
-                <td>BSc BMWGNK</td>
-                <td><a href="">Dubbele bachelor Biomedische Wetenschappen en Geneeskunde</a></td>
-                <td>prof. dr. Stanley Brul</td>
-                <td>drs. E.M. Boerboom-Schuurmans, drs. M.H.E. Bergmans, Sarah Meijer</td>
-                <td>Suman Jugal BSc, Tamar Vis BSc</td>
-            </tr>
-            <tr>
-                <td>BSc PB</td>
-                <td><a href="">Bachelor Psychobiologie</a></td>
-                <td>dr. ing. E.A. van Vliet</td>
-                <td>Anne Klomp</td>
-                <td>Suman Jugal BSc, Tamar Vis BSc</td>
-            </tr>
-            <tr>
-                <td>Anne Klomp</td>
-                <td><a href="">College of Life Sciences (algemeen)</a></td>
-                <td>prof. dr. Stanley Brul</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Min BMN</td>
-                <td><a href="">Minor Biomedical sciences: Neurobiology</a></td>
-                <td>dr. A.B. Mulder</td>
-                <td>drs. E.M. Boerboom-Schuurmans, drs. M.H.E. Bergmans, prof. dr. Stanley Brul</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Min BMS</td>
-                <td><a href=""> Minor Biomedical Sciences: From basic biology to booming business</a></td>
-                <td>dr. Renée van Amerongen</td>
-                <td>drs. E.M. Boerboom-Schuurmans, drs. M.H.E. Bergmans, prof. dr. Stanley Brul</td>
-                <td>Suman Jugal BSc, Tamar Vis BSc</td>
-            </tr>
-            <tr>
-                <td>Min EPB</td>
-                <td><a href="">Minor Evolutionary Psychobiology</a></td>
-                <td>dr. A. Ploeger</td>
-                <td>Anne Klomp</td>
-                <td>Suman Jugal BSc, Tamar Vis BSc</td>
-            </tr>
-            <tr>
-                <td>Min MLS</td>
-                <td><a href="">Minor Molecular Life Sciences</a></td>
-                <td>prof. dr. ir. R.C. Schuurink</td>
-                <td>drs. E.M. Boerboom-Schuurmans, Anne Klomp, drs. M.H.E. Bergmans</td>
-                <td>Suman Jugal BSc, Tamar Vis BSc</td>
-            </tr>
-        </table>
-    </div>
+<?php
+include_once 'layout-foot.php';
 
-    <?php
-    include_once 'layout-foot.php';
-    
 ?>
