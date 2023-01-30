@@ -41,6 +41,15 @@ body {
     flex-direction: column;
 }
 
+.full-centered {
+    align-items: center;
+    justify-content: center;
+}
+
+.gap-5 {
+    gap: 5px;
+}
+
 .active {
     display: flex !important;
 }
@@ -63,4 +72,35 @@ body {
 
 .content-box {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: var(--main-component-color);
+    border-radius: 10px;
+}
+
+.content-wrapper {
+    gap: 30px;
+    padding: 20px;
+}
+
+.wrapper--left {
+    gap: 30px;
+}
+
+.wrapper--right {
+    height: 100%;
+    width: 100%;
+    gap: 30px;
+}
+
+#caledar-date-headers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ADD6BA;
+    border-radius: 10px 10px 0px 0px;
+}
+
+#caledar-date-headers th {
+    width: 203px;
 }

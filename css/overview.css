@@ -2,21 +2,6 @@
     display: none;
 }
 
-.dash-wrapper .content-wrapper {
-    gap: 30px;
-
-    padding: 20px;
-}
-
-.wrapper--left {
-    gap: 30px;
-}
-
-.wrapper--right {
-    height: 100%;
-    gap: 30px;
-}
-
 .profile--wrapper {
     width: 50vw;
     gap: 30px;
