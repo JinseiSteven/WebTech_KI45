@@ -71,3 +71,62 @@
 .nav-bar--items .item:hover svg g path {
     fill: var(--selected-text-color);
 }
+
+.profile-status {
+
+    width: 231px;
+    height: 113px;
+    background-color: #338877;
+    border-radius: 5px;
+    margin-left: 8px;
+    padding: 0px !important;
+    margin-top: auto;
+}
+
+.profile-header {
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    padding: 5px;
+}
+
+#profile-subheader {
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+    opacity: 0.5;
+    margin-left: 5px;
+}
+
+.guest-login-btns {
+    margin-top: 10px;
+}
+
+.guest-login-btns button {
+    width: 50%;
+    height: 30px;
+    border-radius: 4px;
+    background-color: white;
+    color: #338877;
+    border: none;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.guest-login-btns button:hover {
+    scale: 1.05;
+    color: white;
+}
+
+.guest-login-btns button a {
+    text-decoration: none;
+    color: #338877;
+    font-weight: 600;
+}
+
+.profile-status span {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+
+}
