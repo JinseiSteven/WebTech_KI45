@@ -9,7 +9,8 @@ $error_dict = array("alreadylogged"=>"You are already logged in!",
                     "idexists"=>"A user with that id exists already.",
                     "nouser"=>"No user with that id exist.",
                     "invalidpwd"=>"Invalid Password.",
-                    "pwdstrength"=>"Password must be longer than 8 characters and must contain at least one digit");
+                    "pwdstrength"=>"Password must be longer than 8 characters and must contain at least one digit",
+                    "invalidemail"=>"That email is invalid");
 
 if (isset($_GET["error"])) {
     echo "<div class='alert'> 

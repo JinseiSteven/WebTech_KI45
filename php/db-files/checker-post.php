@@ -24,6 +24,8 @@
  *      Checks the submitted name consists of only letters.
  *  - invalid_id($studentID) -> None
  *      Checks whether the submitted id consists of only numbers.
+ *  - valid_email($email) -> None
+ *      Checks whether the submitted email is a valid email.
  *  - pwd_match($pwd, $pwdrpt) -> None
  *      Checks whether the password and repeat password match.
  *  - pwd_strength($pwd) -> None
@@ -36,7 +38,7 @@ class FormChecker {
 
     private $adress;
     
-    public function check_signup($name, $studentID, $pwd, $pwdrpt) {
+    public function check_signup($name, $studentID, $email, $pwd, $pwdrpt) {
 
         $this->adress = "signup.php";
 
@@ -44,6 +46,7 @@ class FormChecker {
         $this->empty_field(array($name, $studentID, $pwd, $pwdrpt));
         $this->invalid_name($name);
         $this->invalid_id($studentID);
+        $this->valid_email($email);
         $this->pwd_strength($pwd);
         $this->pwd_match($pwd, $pwdrpt);
         
@@ -93,6 +96,13 @@ class FormChecker {
         // only numbers between 0 and 9 inclusive are allowed
         if (!preg_match("/^[0-9]*$/", $studentID)) {
             $this->redirect("invalidid");
+            exit();
+        }
+    }
+
+    public function valid_email($email) {
+        if (!is_null($email) && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $this->redirect("invalidemail");
             exit();
         }
     }

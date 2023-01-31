@@ -41,16 +41,30 @@
                         >
                     </div>
                 </div>
-                <label for="studentID">
-                    <b>Your Student number:</b>
-                </label>
-                <input
-                    type="text"
-                    class="studentid-input"
-                    placeholder="e.g. 13977571"
-                    name="studentID"
-                    required
-                >
+                <div class="flex--row">
+                    <div class="flex--column">
+                    <label for="studentID">
+                        <b>Your Student number:</b>
+                    </label>
+                    <input
+                        type="text"
+                        placeholder="e.g. maxrutte1@gmail.com"
+                        name="email"
+                    >
+                    </div>
+                    <div class="flex--column">
+                        <label for="email">
+                            <b>Your email adress:</b>
+                        </label>
+                        <input
+                            type="text"
+                            class="studentid-input"
+                            placeholder="e.g. 13977571"
+                            name="studentID"
+                            required
+                        >
+                    </div>
+                </div>
                 <div class="flex--row">
                     <div class="flex--column">
                         <label for="pwd">

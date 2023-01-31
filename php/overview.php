@@ -17,7 +17,7 @@
                 </div>
                 <div class="flex--column profile-data">
                     <span class="profile-data--name"><?php echo $_SESSION['userName']?></span>
-                    <span class="profile-data--email">remolovdplasse@gmail.com</span>
+                    <span class="profile-data--email"><?php if (isset($_SESSION['email'])) {echo $_SESSION['email'];}?></span>
                     <span class="profile-data--ec">24 EC</span>
                 </div>
             </div>

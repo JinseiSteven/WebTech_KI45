@@ -8,7 +8,7 @@
 $serverName = "localhost";
 $dbUsername = "root";
 $dbPassword = "";
-$dbName = "DataNoseDB";
+$dbName = "dnppdatabase";
 
 // establishing a connection to the database
 $conn = mysqli_connect($serverName, $dbUsername, $dbPassword, $dbName);

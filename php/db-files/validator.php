@@ -33,19 +33,21 @@ function validate_login() {
 
     // validates random cookie key with database
     if (!password_verify($_COOKIE["random_key"],
-        $cookiedata["cookiesKey"])) {
+        $cookiedata["cookieKey"])) {
         return false;
     }
 
     // validates whether the cookie has expired
-    if ($cookiedata["cookiesExpDate"] >= time()) {
+    if ($cookiedata["cookieExpDate"] >= time()) {
 
         $userhandler = new UserHandler($conn);
-        $userdata = $userhandler->get_user_data("usersID", $_COOKIE["userID"]);
+        $userdata = $userhandler->get_user_data("userID", $_COOKIE["userID"]);
 
-        $_SESSION["userID"] = $userdata["usersID"];
-        $_SESSION["userStudentID"] = $userdata["usersStudentID"];
-        $_SESSION["userName"] = $userdata["usersName"];
+        $_SESSION["userID"] = $userdata["userID"];
+        $_SESSION["userStudentID"] = $userdata["userStudentID"];
+        $_SESSION["userName"] = $userdata["userName"];
+        $_SESSION['email'] = $userdata["userEmail"];
+        $_SESSION["admin"] = $userdata["admin"];
         return true;
     }
 

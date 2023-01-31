@@ -14,7 +14,7 @@
  *  - get_user_data($key, $data) -> Array | false
  *      gets user data based on their studentID.
  *      Returns an associative array of the data, or "false" if no data exists.
- *  - signup($name, $student-ID, $pwd) -> None
+ *  - signup($name, $studentID, $pwd) -> None
  *      Adds a user to the user database.
  *  - login($studentID, $pwd) -> None
  *      Logs the user in and starts a session.
@@ -60,16 +60,11 @@ class UserHandler
     }
 
 
-    public function signup($name, $studentID, $pwd)
+    public function signup($name, $studentID, $email, $pwd)
     {
-        // checking whether the studentID already exists in the database
-        if ($this->get_user_data("usersStudentID", $studentID) !== false) {
-            header("location: ../signup.php?error=idexists");
-            exit();
-        }
 
         // initialising and preparing the sql-statement, to prevent sql-injections
-        $sql = "INSERT INTO users (usersName, usersStudentID, usersPwd) VALUES (?, ?, ?);";
+        $sql = "INSERT INTO users (userName, userStudentID, userEmail, userPwd) VALUES (?, ?, ?, ?);";
         $stmt = mysqli_stmt_init($this->conn);
 
         // checking whether the sql-statement preparation succeeds
@@ -82,7 +77,7 @@ class UserHandler
         $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
         // binding the paramaters to the sql-statement and executing it
-        mysqli_stmt_bind_param($stmt, "sis", $name, $studentID, $hashedPwd);
+        mysqli_stmt_bind_param($stmt, "siss", $name, $studentID, $email, $hashedPwd);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
 
@@ -95,17 +90,11 @@ class UserHandler
     public function login($studentID, $pwd)
     {
         
-        // checking whether the student-Id exists in the database
-        $userdata = $this->get_user_data("usersStudentID", $studentID);
-
-        // if not, redirecting the user to the login page with an error message
-        if ($userdata === false) {
-            header("location: ../login.php?error=nouser");
-            exit();
-        }
+        // getting the userd-data from the database
+        $userdata = $this->get_user_data("userStudentID", $studentID);
 
         // hashing the submitted password and comparing it to the valid password
-        $hashedPwd = $userdata["usersPwd"];
+        $hashedPwd = $userdata["userPwd"];
         $checkPwd = password_verify($pwd, $hashedPwd);
 
         // if the passwords don't match, redirect to login page with error message
@@ -117,9 +106,11 @@ class UserHandler
         // else, log the user in and redirect to the overview page
         else {
             session_start();
-            $_SESSION["userID"] = $userdata["usersID"];
-            $_SESSION["userStudentID"] = $userdata["usersStudentID"];
-            $_SESSION["userName"] = $userdata["usersName"];
+            $_SESSION["userID"] = $userdata["userID"];
+            $_SESSION["userStudentID"] = $userdata["userStudentID"];
+            $_SESSION["userName"] = $userdata["userName"];
+            $_SESSION['email'] = $userdata["userEmail"];
+            $_SESSION["admin"] = $userdata["admin"];
             header("location: ../overview.php");
             exit();
         }

@@ -123,8 +123,11 @@
                 <?php
                     if (validate_login()) {
                         echo "<form action='db-files/logout-post.php' method='post'>
-                                <input type='submit' name='logout' value='Logout' />
+                                <button class='logout-button' type='submit' name='logout'>Logout</button>
                               </form>";
+                    }
+                    if (isset($_SESSION["admin"]) && $_SESSION["admin"]) {
+                        echo "<h2>ADMIN VIEW</h2>";
                     }
                 ?>
             </div>

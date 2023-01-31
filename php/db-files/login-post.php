@@ -19,12 +19,19 @@ if (isset($_POST["submit"])) {
     if ($formchecker->check_login($studentID, $pwd) === true) {
 
         $userhandler = new UserHandler($conn);
+        $userdata = $userhandler->get_user_data("userStudentID", $studentID);
+
+        // redirecting the user to the login page if no user is found
+        if ($userdata === false) {
+            header("location: ../login.php?error=nouser");
+            exit();
+        }
 
         // if the user clicked the "stay logged in" checkbox, generates cookies
-        if (isset($_POST["remember"])) {
+        if (isset($_POST["remember"]) && !$userdata["admin"]) {
             $cookiehandler = new CookieHandler($conn);
-            $userdata = $userhandler->get_user_data("usersStudentID", $studentID);
-            $cookiehandler->bake_cookies($userdata["usersID"]);
+            $userdata = $userhandler->get_user_data("userStudentID", $studentID);
+            $cookiehandler->bake_cookies($userdata["userID"]);
         }
 
         $userhandler->login($studentID, $pwd);
