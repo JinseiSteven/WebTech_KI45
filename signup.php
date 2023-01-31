@@ -1,68 +1,49 @@
 <?php
-    include_once 'layout-head.php';
+include_once 'layout-head.php';
 
-    /* Content for the page below */
+/* Content for the page below */
 ?>
 
 
 <div class="content-wrapper logsign-wrapper active">
 
     <?php
-        include_once 'includes/cross-anim.php';
-        include_once "includes/errors.php";
+    include_once 'includes/cross-anim.php';
+    include_once "includes/errors.php";
     ?>
 
     <div class="flex--column login--container">
         <h1>Welcome to Datanose++!</h1>
         <div class="flex--column signup-box">
-            <h2>Sign up to see your personalised overview</h2>
+            <h2>Register your account</h2>
             <form action="db-files/signup-post.php" class="flex--column" method="post">
                 <div class="flex--row">
                     <div class="flex--column">
                         <label for="name">
                             <b>First name:</b>
                         </label>
-                        <input
-                            type="text"
-                            placeholder="e.g. Max"
-                            name="name"
-                            required
-                        >
+                        <input type="text" placeholder="e.g. Max" name="name" required>
                     </div>
                     <div class="flex--column">
                         <label for="surname">
                             <b>Last name:</b>
                         </label>
-                        <input
-                            type="text"
-                            placeholder="e.g. Rutte"
-                            name="surname"
-                            required
-                        >
+                        <input type="text" placeholder="e.g. Rutte" name="surname" required>
                     </div>
                 </div>
                 <div class="flex--row">
                     <div class="flex--column">
-                    <label for="studentID">
-                        <b>Your Student number:</b>
-                    </label>
-                    <input
-                        type="text"
-                        placeholder="e.g. maxrutte1@gmail.com"
-                        name="email"
-                    >
+                        <label for="studentID">
+                            <b>Your Student number:</b>
+                        </label>
+                        <input type="text" class="studentid-input" placeholder="e.g. 13977571" name="studentID"
+                            required>
                     </div>
                     <div class="flex--column">
                         <label for="email">
                             <b>Your email adress:</b>
                         </label>
-                        <input
-                            type="text"
-                            class="studentid-input"
-                            placeholder="e.g. 13977571"
-                            name="studentID"
-                            required
-                        >
+                        <input type="text" placeholder="e.g. maxrutte1@gmail.com" name="email">
                     </div>
                 </div>
                 <div class="flex--row">
@@ -70,23 +51,13 @@
                         <label for="pwd">
                             <b>Your Password:</b>
                         </label>
-                        <input
-                            type="password"
-                            placeholder="e.g. Datanose++isTheBest "
-                            name="pwd"
-                            required
-                        >
+                        <input type="password" placeholder="e.g. Datanose++isTheBest " name="pwd" required>
                     </div>
                     <div class="flex--column">
                         <label for="pwdrpt">
                             <b>Repeat Password:</b>
                         </label>
-                        <input
-                            type="password"
-                            placeholder="..."
-                            name="pwdrpt"
-                            required
-                        >
+                        <input type="password" placeholder="..." name="pwdrpt" required>
                     </div>
                 </div>
                 <button type="submit" name="submit">Sign up</button>
@@ -101,5 +72,5 @@
 
 
 <?php
-    include_once 'layout-foot.php';
+include_once 'layout-foot.php';
 ?>

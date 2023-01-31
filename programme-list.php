@@ -6,7 +6,7 @@ include_once 'layout-head.php';
 
 <div class="programme-wrapper">
     <header>
-        <h1>Programme list</h1>
+        <h1>Programme list 📋</h1>
     </header>
     <ul>
         <li>
@@ -627,89 +627,7 @@ include_once 'layout-head.php';
     </ul>
 </div>
 
-<div>
-    <h2 class="phead">College of Informatics</h2>
-    <h4 class="director">Director: dr. Jacobijn Sandberg</h4>
-    <table class="bodytable">
-        <tr>
-            <th>Code</th>
-            <th>Name</th>
-            <th>Program director</th>
-            <th>Coordinator</th>
-            <th>Assistent coordinator</th>
-        </tr>
-        <tr>
-            <td>BSc IK</td>
-            <td><a href="">Bachelor Informatiekunde</a></td>
-            <td>dr. S. van Splunter</td>
-            <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
-            <td>Eline Groot</td>
-        </tr>
-        <tr>
-            <td>BSc IN</td>
-            <td><a href="">Bachelor Informatica</a></td>
-            <td>dr. Zhiming Zhao</td>
-            <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
-            <td>Eline Groot</td>
-        </tr>
-        <tr>
-            <td>BSc KI</td>
-            <td><a href="">Bachelor Kunstmatige Intelligentie</a></td>
-            <td>prof. dr. C. Monz</td>
-            <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
-            <td>Eline Groot</td>
-        </tr>
-        <tr>
-            <td>CoI-alg</td>
-            <td><a href="">College of Informatics (algemeen)</a></td>
-            <td>H.L. Dekkers</td>
-            <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Min AI</td>
-            <td><a href="">Minor Artificial Intelligence</a></td>
-            <td></td>
-            <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
-            <td>Eline Groot</td>
-        </tr>
-        <tr>
-            <td>Min CS</td>
-            <td><a href="">Minor Computational Science</a></td>
-            <td>dr. Rick Quax</td>
-            <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
-            <td>Eline Groot</td>
-        </tr>
-        <tr>
-            <td>Min IN</td>
-            <td><a href="">Minor Informatica</a></td>
-            <td>dr. Zhiming Zhao</td>
-            <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
-            <td>Eline Groot</td>
-        </tr>
-        <tr>
-            <td>Min KI</td>
-            <td><a href="">Minor Kunstmatige Intelligentie</a></td>
-            <td>dr. Ilia Markov</td>
-            <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
-            <td>Eline Groot</td>
-        </tr>
-        <tr>
-            <td>Min Prog</td>
-            <td><a href="">Minor Programmeren</a></td>
-            <td>H.L. Dekkers</td>
-            <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
-            <td>Eline Groot</td>
-        </tr>
-        <tr>
-            <td>Min SciProg</td>
-            <td><a href="">Minor Scientific Programming</a></td>
-            <td>H.L. Dekkers</td>
-            <td>dr. S.C. ten Brinck, Sophie Krakers, P.B.J. Hagebeuk, dr. B. Sluijter</td>
-            <td></td>
-        </tr>
-    </table>
-</div>
+
 
 <?php
 include_once 'layout-foot.php';

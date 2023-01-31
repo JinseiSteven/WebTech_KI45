@@ -1,7 +1,11 @@
 .programme-wrapper {
-    height: 100%;
+    height: 100vh;
     width: 100%;
-    /* overflow-y: scroll !important; */
+
+}
+
+header {
+    margin-left: 30px;
 }
 
 .programme-wrapper ul {
@@ -9,7 +13,7 @@
 }
 
 .programme-wrapper h1 {
-    color:  white;
+    color: white;
     margin-left: 30px;
     background-color: var(--main-sub-color);
     border-radius: 10px;
@@ -20,7 +24,7 @@
 
 .phead {
     color: var(--main-sub-color);
-    margin-left: 30px;
+    margin-left: 20px;
     margin-bottom: 0px;
     background-color: white;
     border-radius: 10px;
@@ -31,7 +35,7 @@
 
 .director {
     color: var(--main-sub-color);
-    margin-left: 30px;
+    margin-left: 20px;
     margin-top: 5px;
     margin-bottom: 15px;
     background-color: white;
@@ -48,7 +52,8 @@
     color: white;
 }
 
-.programme-wrapper th, .programme-wrapper td {
+.programme-wrapper th,
+.programme-wrapper td {
     padding: 5px;
     padding-inline-start: 20px;
     padding-inline-end: 20px;
@@ -79,17 +84,17 @@
     text-decoration: none;
     color: black;
 }
-  
+
 .programme-wrapper a:visited {
     text-decoration: none;
 }
-  
+
 .programme-wrapper a:hover {
     text-decoration: none;
     color: var(--main-sub-color);
 }
-  
+
 .programme-wrapper a:active {
-        text-decoration: none;
+    text-decoration: none;
     color: var(--main-sub-color);
 }

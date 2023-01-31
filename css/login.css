@@ -32,8 +32,8 @@
 }
 
 .signup-box {
-    height: 485px;
-    width: 460px;
+    height: 461px;
+    width: 471px;
 }
 
 .login--container {
@@ -60,7 +60,7 @@
 .logsign-wrapper button {
     background-color: #338877;
     border: none;
-    width: 100%;
+    width: 50%;
     padding: 15px;
     border-radius: 3px;
     color: var(--main-component-color);
@@ -70,6 +70,7 @@
     font-size: 16px;
     cursor: pointer;
     overflow: visible;
+    margin-top: 15px;
 }
 
 .logsign-wrapper button:active {
@@ -79,8 +80,15 @@
 }
 
 .logsign-wrapper b,
-.logsign-wrapper h2 {
+.logsign-wrapper h2,
+h5 {
     color: var(--sub-text-color);
+
+}
+
+.logsign-wrapper b {
+    font-size: 15px;
+    font-weight: 500;
 }
 
 .login--container form {
@@ -91,9 +99,11 @@
 .logsign-wrapper input[type=text],
 .logsign-wrapper input[type=password] {
     padding: 12px;
+    width: 215px;
     border-width: 0px;
     box-sizing: border-box;
     margin: 10px;
+    margin-top: 3px;
     display: flex;
     outline: 1px solid var(--divider-bar-color);
 }

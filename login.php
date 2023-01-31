@@ -14,7 +14,7 @@ include_once './layout-head.php';
     <div class="flex--column login--container">
         <h1>Welcome to Datanose++!</h1>
         <div class="flex--column login-box">
-            <h2>Log in to see your personalised overview</h2>
+            <h2>Log in to access your personalised overview</h2>
             <form action="db-files/login-post.php" class="flex--column" method="post">
                 <label for="studentID">
                     <b>Your Student number:</b>
