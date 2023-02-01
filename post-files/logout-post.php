@@ -3,8 +3,8 @@ session_start();
 
 if (isset($_POST["logout"]) && !empty($_SESSION["userID"])) {
 
-    include_once "dbh-post.php";
-    include_once "cookiehandler-post.php";
+    require_once "../includes/dbh-inc.php";
+    require_once "../includes/cookiehandler-inc.php";
 
     // removing the cookies
     $cookiehandler = new CookieHandler($conn);

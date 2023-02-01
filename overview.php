@@ -15,15 +15,15 @@ include_once 'layout-head.php';
         <div class="flex--row profile--wrapper">
             <div class="flex--row profile-data-box">
                 <div class="picture-box">
-                    <img src="./assets/img/profile-picture1.png" class="profile-picture" alt="profile picture">
+                    <img src="<?php echo $_SESSION["userImgPath"] ?>" class="profile-picture" alt="profile picture">
                 </div>
                 <div class="flex--column profile-data">
                     <span class="profile-data--name">
                         <?php echo $_SESSION['userName'] ?>
                     </span>
                     <span class="profile-data--email">
-                        <?php if (isset($_SESSION['email'])) {
-                            echo $_SESSION['email'];
+                        <?php if (isset($_SESSION['userEmail'])) {
+                            echo $_SESSION['userEmail'];
                         } ?>
                     </span>
                     <span class="profile-data--ec">24 EC</span>

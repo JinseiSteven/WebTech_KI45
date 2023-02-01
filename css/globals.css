@@ -104,3 +104,18 @@ body {
 #caledar-date-headers th {
     width: 203px;
 }
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: var(--main-component-color);
+    border: 1px solid var(--divider-bar-color);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: var(--main-sub-color);
+}

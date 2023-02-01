@@ -7,10 +7,17 @@ if (isset($_POST["submit"])) {
     $pwd = strip_tags($_POST["pwd"]);
 
     // establishing a connection to the database
-    require_once "dbh-post.php";
-    require_once "userhandler-post.php";
-    require_once "cookiehandler-post.php";
-    require_once "checker-post.php";
+    require_once "../includes/dbh-inc.php";
+    require_once "../includes/userhandler-inc.php";
+    require_once "../includes/formchecker-inc.php";
+    require_once "../includes/cookiehandler-inc.php";
+    require_once "../includes/csrf-inc.php";
+
+    // first we check the csrf-token to stop malicious post requests
+    if (!isset($_POST["csrf_token"]) || !validate_csrf($_POST["csrf_token"])) {
+        header("location: ../login.php?error=csrferror");
+        exit();
+    }
 
     // checks the submitted fields using the FormChecker class
     $formchecker = new FormChecker();

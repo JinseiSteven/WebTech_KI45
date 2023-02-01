@@ -15,6 +15,10 @@
  *      Checks whether the submitted signup form is valid.
  *  - check_login($studentID, $pwd) -> None | true
  *      Checks whether the submitted login form is valid.
+ *  - check_edit($name, $studentID, $email, $image) -> None | true
+ *      Checks whether the submitted edit form is valid.
+ *  - check_changepwd($pwd, $pwdrpt) -> None | true
+ *      Checks whether the submitted "change password" form is valid.
  * 
  *  - already_logged_in() -> true | None
  *      Checks whether the user is already logged in.
@@ -24,8 +28,11 @@
  *      Checks the submitted name consists of only letters.
  *  - invalid_id($studentID) -> None
  *      Checks whether the submitted id consists of only numbers.
- *  - valid_email($email) -> None
+ *  - invalid_email($email) -> None
  *      Checks whether the submitted email is a valid email.
+ *  - invalid_image($image) -> None
+ *      Checks whether the submitted image is under 5MB and it's width and
+ *      height are under 500px.
  *  - pwd_match($pwd, $pwdrpt) -> None
  *      Checks whether the password and repeat password match.
  *  - pwd_strength($pwd) -> None
@@ -46,7 +53,7 @@ class FormChecker {
         $this->empty_field(array($name, $studentID, $pwd, $pwdrpt));
         $this->invalid_name($name);
         $this->invalid_id($studentID);
-        $this->valid_email($email);
+        $this->invalid_email($email);
         $this->pwd_strength($pwd);
         $this->pwd_match($pwd, $pwdrpt);
         
@@ -60,6 +67,30 @@ class FormChecker {
         $this->already_logged_in();
         $this->empty_field(array($studentID, $pwd));
         $this->invalid_id($studentID);
+
+        return true;
+    }
+
+    public function check_edit($name, $studentID, $email, $image) {
+
+        $this->adress = "edit.php";
+        
+        $this->empty_field(array($name, $studentID));
+        $this->invalid_name($name);
+        $this->invalid_id($studentID);
+        $this->invalid_email($email);
+        $this->invalid_image($image);
+
+        return true;
+    }
+
+    public function check_changepwd($pwd, $pwdrpt) {
+
+        $this->adress = "edit.php";
+        
+        $this->empty_field(array($pwd, $pwdrpt));
+        $this->pwd_strength($pwd);
+        $this->pwd_match($pwd, $pwdrpt);
 
         return true;
     }
@@ -100,9 +131,23 @@ class FormChecker {
         }
     }
 
-    public function valid_email($email) {
+    public function invalid_email($email) {
         if (!is_null($email) && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $this->redirect("invalidemail");
+            exit();
+        }
+    }
+
+    public function invalid_image($image) {
+
+        if ($image === NULL) {
+            return;
+        }
+
+        list($width, $height) = getimagesize($image["tmp_name"]);
+        // 5MB maximum filesize
+        if ($image["size"] > 5000000 || $width > 500 || $height > 500) {
+            $this->redirect("invalidimage");
             exit();
         }
     }

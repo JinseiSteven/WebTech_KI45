@@ -28,8 +28,7 @@ class CookieHandler
     private $conn;
 
     // instantiate object with database connection
-    public function __construct($conn)
-    {
+    public function __construct($conn){
         $this->conn = $conn;
     }
 

@@ -1,6 +1,7 @@
-<?php
+<?php 
 session_start();
-include_once 'db-files/validator.php';
+require_once "includes/csrf-inc.php";
+include_once 'includes/validator-inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -14,6 +15,7 @@ include_once 'db-files/validator.php';
     <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <meta name="csrf_token" content="<?php echo generate_csrf() ?>">
     <title>Datanose++</title>
     <link rel="stylesheet" href="./css/globals.css">
     <link rel="stylesheet" href="./css/navbar.css">
@@ -23,6 +25,7 @@ include_once 'db-files/validator.php';
     <link rel="stylesheet" href="./css/personal-timetable.css">
     <link rel="stylesheet" href="./css/cross-animation.css">
     <link rel="stylesheet" href="./css/table-styling.css">
+    <link rel="stylesheet" href="./css/edit.css">
 </head>
 
 <body>
@@ -118,7 +121,7 @@ include_once 'db-files/validator.php';
 
                 <?php
                 if (validate_login()) {
-                    echo "<form action='db-files/logout-post.php' method='post'>
+                    echo "<form action='post-files/logout-post.php' method='post'>
                                 <button class='logout-button' type='submit' name='logout'>Logout</button>
                               </form>";
                 } else if (isset($_SESSION["admin"]) && $_SESSION["admin"]) {
@@ -137,19 +140,6 @@ include_once 'db-files/validator.php';
                 }
                 ?>
 
-            </div>
-            <div>
-
-                <?php
-                if (validate_login()) {
-                    echo "<form action='db-files/logout-post.php' method='post'>
-                                <button class='logout-button' type='submit' name='logout'>Logout</button>
-                              </form>";
-                }
-                if (isset($_SESSION["admin"]) && $_SESSION["admin"]) {
-                    echo "<h2>ADMIN VIEW</h2>";
-                }
-                ?>
             </div>
         </div>
         <div class="flex--column content-main">

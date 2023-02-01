@@ -16,9 +16,16 @@ if (isset($_POST["submit"])) {
     }
 
     // establishing a connection to the database
-    require_once "dbh-post.php";
-    require_once "userhandler-post.php";
-    require_once "checker-post.php";
+    require_once "../includes/dbh-inc.php";
+    require_once "../includes/userhandler-inc.php";
+    require_once "../includes/formchecker-inc.php";
+    require_once "../includes/csrf-inc.php";
+
+    // first we check the csrf-token to stop malicious post requests
+    if (!isset($_POST["csrf_token"]) || !validate_csrf($_POST["csrf_token"])) {
+        header("location: ../signup.php?error=csrferror");
+        exit();
+    }
 
     // checks the submitted fields using the FormChecker class
     $formchecker = new FormChecker();
@@ -48,4 +55,5 @@ if (isset($_POST["submit"])) {
 // if the user has not correctly posted the form, send back to signup page
 else {
     header("location: ../signup.php");
+    exit();
 }

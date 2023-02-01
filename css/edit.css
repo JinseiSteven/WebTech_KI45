@@ -1,0 +1,49 @@
+.edit-container {
+    align-items: center;
+}
+
+.profile-settings-box, .password-change-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    margin: 25px;
+    background: var(--main-component-color);
+    border-radius: 8px;
+}
+
+.edit-container input[type=text],
+.edit-container input[type=password],
+.edit-container input[type=file] {
+    padding: 12px;
+    border-width: 0px;
+    box-sizing: border-box;
+    margin: 10px;
+    display: flex;
+    outline: 1px solid var(--divider-bar-color);
+}
+
+.edit-container input[type=text]:focus,
+.edit-container input[type=password]:focus {
+    outline: 2px solid var(--main-sub-color);
+}
+
+.edit-container button {
+    background-image: linear-gradient(var(--main-glow-color), var(--main-accent-color));
+    border: none;
+    padding: 15px 40px;
+    border-radius: 10%;
+    color: var(--main-component-color);
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 7px var(--divider-bar-color);
+    overflow: visible;
+}
+
+.edit-container button:active {
+    filter: brightness(90%);
+    box-shadow: 0 3px var(--divider-bar-color);
+    transform: translateY(4px);
+}
