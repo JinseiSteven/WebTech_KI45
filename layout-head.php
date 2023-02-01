@@ -1,5 +1,6 @@
-<?php 
+<?php
 session_start();
+include_once 'cookie-popup.php';
 require_once "includes/csrf-inc.php";
 include_once 'includes/validator-inc.php';
 ?>
@@ -23,12 +24,14 @@ include_once 'includes/validator-inc.php';
     <link rel="stylesheet" href="./css/overview.css">
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/personal-timetable.css">
+    <link rel="stylesheet" href="./css/cookie-popup.css">
     <link rel="stylesheet" href="./css/cross-animation.css">
     <link rel="stylesheet" href="./css/table-styling.css">
     <link rel="stylesheet" href="./css/edit.css">
 </head>
 
 <body>
+
     <div class="flex--row body--wrapper">
         <div class="flex--column nav-bar">
             <div class="header">

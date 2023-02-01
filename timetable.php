@@ -1,10 +1,8 @@
 <?php
 include_once 'layout-head.php';
-
-/* Content for the page below */
 ?>
 
-<div class="content-main personal-timetable active">
+<div class="personal-timetable active">
     <div class="flex--column section-header">
         <span class="header">Your Timetable 📅</span>
     </div>
