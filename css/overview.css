@@ -29,6 +29,7 @@
 .profile-picture {
     width: 200px;
     height: 246.37px;
+    object-fit: cover;
 }
 
 .profile-data {

@@ -31,7 +31,7 @@
  *  - invalid_email($email) -> None
  *      Checks whether the submitted email is a valid email.
  *  - invalid_image($image) -> None
- *      Checks whether the submitted image is under 5MB and it's width and
+ *      Checks whether the submitted image is under 2MB and it's width and
  *      height are under 500px.
  *  - pwd_match($pwd, $pwdrpt) -> None
  *      Checks whether the password and repeat password match.
@@ -144,9 +144,9 @@ class FormChecker {
             return;
         }
 
-        list($width, $height) = getimagesize($image["tmp_name"]);
-        // 5MB maximum filesize
-        if ($image["size"] > 5000000 || $width > 500 || $height > 500) {
+        $imageinfo = getimagesize($image["tmp_name"]);
+        // 2MB maximum filesize
+        if ($image["size"] > 2000000 || $imageinfo[0] > 500 || $imageinfo[1] > 500) {
             $this->redirect("invalidimage");
             exit();
         }

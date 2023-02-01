@@ -115,6 +115,12 @@ include_once 'includes/validator-inc.php';
                 </div>
 
             </div>
+            <div class="color-mode-box">
+                <label class="color-switch" for="color-checkbox">
+                    <input type="checkbox" id="color-checkbox" />
+                    <div class="ball-switch"></div>
+                </label>
+            </div>
             <div class="profile-status flex--column">
 
 
