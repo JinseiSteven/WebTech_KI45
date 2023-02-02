@@ -2,8 +2,13 @@
     include_once 'layout-head.php';
 
     /* Content for the page below */
-
-    list($name, $surname) = preg_split('#\s+#', $_SESSION["userName"], 2);
+    if (!strpos($_SESSION["userName"], ' ')) {
+        list($name, $surname) = preg_split('#\s+#', $_SESSION["userName"], 2);
+    }
+    else {
+        $name = $_SESSION["userName"];
+        $surname = "";
+    }
 ?>
 
 <div class="flex--row edit-container">

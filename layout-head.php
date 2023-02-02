@@ -112,6 +112,7 @@ include_once 'cookie-popup.php';
                                     <span href="index.html">Programme list</span>
                                 </div>
                             </a>
+                            <?php if ($_SESSION["admin"]) {?>
                             <a href="admin.php">
                                 <div class="item" id="admin-page">
                                     <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
@@ -130,12 +131,13 @@ include_once 'cookie-popup.php';
                                     <span>Admin</span>
                                 </div>
                             </a>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
 
             </div>
-            <span id="theme-change-header">Want to change up the theme a litte?</span>
+            <span id="theme-change-header">Want to change up the theme a little?</span>
             <span id="theme-change-subheader">Flick the light below to change the theme!</span>
             <div class="color-mode-box">
 
