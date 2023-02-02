@@ -55,14 +55,14 @@ include_once 'layout-head.php';
             </div>
         </div>
     </div>
-    <div class="flex--column wrapper--right">
-        <div class="attendance--box">
+    <!--<div class="flex--column wrapper--right">
+         <div class="attendance--box">
             <span class="box--header">Attendance</span>
             <div class="attendance--content">
                 cool
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 
 

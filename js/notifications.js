@@ -5,8 +5,15 @@ class Notify {
       this.time = time;
       this.element = null;
 
+        this.clean();
         this.create();
         this.show();
+    }
+    clean(){
+        var notifications = document.getElementsByClassName('notify-notification');
+        for(var i = 0; i < notifications.length; i++){
+            notifications[i].remove();
+        }
     }
     create(){
         var element = document.createElement('div');
@@ -58,7 +65,7 @@ class NotificationHandler {
         this.addNotification(notify)
     }
     info(message) {
-        var notify = new Notify(message, 'blue', 3500);
+        var notify = new Notify(message, '3BFBEF', 3500);
         this.addNotification(notify)
     }
 }

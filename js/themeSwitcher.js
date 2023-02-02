@@ -2,15 +2,18 @@
 window.addEventListener('load', function () {
     var root = document.querySelector(':root');
     var colorcheckbox = document.getElementById('color-checkbox');
+
     
 
     const themeSwitcher = (slider) =>  {
         if (slider.target.checked) {
             setCookie('theme', 'dark')
+            Nosifier.warning('Watchout, dark mode is coming!')
             switchTheme('dark')
         }
         else {
             setCookie('theme', 'light') 
+            Nosifier.info('Time for some light!')
             switchTheme('light')
         }
     }   
