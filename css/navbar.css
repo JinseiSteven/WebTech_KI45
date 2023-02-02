@@ -79,6 +79,7 @@
     border-radius: 5px;
     margin-left: 8px;
     padding: 0px !important;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
@@ -92,7 +93,7 @@
 #profile-subheader {
     font-size: 12px;
     font-weight: 500;
-    color: white;
+    color: var(--main-component-color);
     opacity: 0.5;
     margin-left: 6px;
 }
@@ -112,7 +113,7 @@
     transition: 0.3s;
 }
 
-.guest-login-btns button:hover{
+.guest-login-btns button:hover {
     scale: 1.05;
 }
 
@@ -131,11 +132,11 @@
 
 }
 
-.guest-login-btns form{
+.guest-login-btns form {
     width: 50%;
 }
 
-.guest-login-btns button{
+.guest-login-btns button {
     width: 95%;
     height: 30px;
     border-radius: 4px;
@@ -166,9 +167,13 @@
 
 .color-mode-box {
     display: flex;
-    padding: 0px !important;
+    flex-direction: row;
+    justify-content: space-between;
     margin: 10px;
-    margin-top: auto;
+    padding: 10px;
+    background-color: var(--main-bg-color);
+    border-radius: 5px;
+
 }
 
 .color-switch {
@@ -208,4 +213,20 @@ input:checked+.ball-switch {
 
 input:checked+.ball-switch:before {
     transform: translateX(22px);
+}
+
+#theme-change-header {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color-plain);
+    margin-left: 10px;
+    margin-top: auto;
+}
+
+#theme-change-subheader {
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--text-color-plain);
+    opacity: 0.5;
+    margin-left: 10px;
 }

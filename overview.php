@@ -6,7 +6,7 @@ include_once 'layout-head.php';
 
 <div class="flex--row content-wrapper dash-wrapper active">
     <div class="flex--column wrapper--left">
-        <div class="flex--column welcome-header">
+        <div class="flex--column section-header ">
             <span class="header">Hi,
                 <?php echo $_SESSION['userName'] ?> 👋
             </span>

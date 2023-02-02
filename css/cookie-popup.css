@@ -94,7 +94,7 @@
     pointer-events: auto;
     padding: 8px 10px;
     border-radius: 8px;
-    background-color: white;
+    background-color: var(--main-component-color);
     transition: 0.5s;
     white-space: nowrap;
 }

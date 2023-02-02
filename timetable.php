@@ -10,37 +10,16 @@ include_once 'layout-head.php';
         <div class="flex--column wrapper--left">
             <div class="content-box periods">
                 <div class="flex--row box--header period-index">
-                    <span>Period (1/6)</span>
+                    <span id="period-counter">Period (1/6)</span>
                     <div id="period-select">
-                        <img src="./assets/img/period-arrow-left.png" class="period-arrow" alt="left arrow">
-                        <img src="./assets/img/period-arrow-right.png" class="period-arrow" alt="right arrow">
+                        <img src="./assets/img/period-arrow-left.png" class="period-arrow" alt="left arrow"
+                            onclick="changePeriod('prev')">
+                        <img src="./assets/img/period-arrow-right.png" class="period-arrow" alt="right arrow"
+                            onclick="changePeriod('next')">
                     </div>
                 </div>
                 <div class="flex--row period-content">
-                    <div class="week active">
-                        Week 36
-                    </div>
-                    <div class="week">
-                        Week 37
-                    </div>
-                    <div class="week">
-                        Week 38
-                    </div>
-                    <div class="week">
-                        Week 39
-                    </div>
-                    <div class="week">
-                        Week 40
-                    </div>
-                    <div class="week">
-                        Week 41
-                    </div>
-                    <div class="week">
-                        Week 42
-                    </div>
-                    <div class="week">
-                        Week 43
-                    </div>
+
                 </div>
             </div>
             <div class="content-box timetable-courses">
@@ -141,43 +120,24 @@ include_once 'layout-head.php';
                     </tr>
                     <tr>
                         <td>
-                            <div class="flex--column course-box" id="WEB">
-                                <span class="course-name">Webtechnologie voor KI/INF</span>
-                                <span class="course-location">Hoorcollege, SP C1.110</span>
-                            </div>
+
 
                         </td>
                         <td>
-                            <div class="flex--column course-box" id="WEB">
-                                <span class="course-name">Webtechnologie voor KI/INF</span>
-                                <span class="course-location">Hoorcollege, SP C1.110</span>
-                            </div>
+
                         </td>
                         <td>
-                            <div class="flex--column course-box" id="WEB">
-                                <span class="course-name">Webtechnologie voor KI/INF</span>
-                                <span class="course-location">Hoorcollege, SP C1.110</span>
-                            </div>
+
                         </td>
                         <td>
-                            <div class="flex--column course-box" id="WEB">
-                                <span class="course-name">Webtechnologie voor KI/INF</span>
-                                <span class="course-location">Hoorcollege, SP C1.110</span>
-                            </div>
+
                         </td>
                         <td>
-                            <div class="flex--column course-box" id="WEB">
-                                <span class="course-name">Webtechnologie voor KI/INF</span>
-                                <span class="course-location">Hoorcollege, SP C1.110</span>
-                            </div>
+
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <div class="flex--column course-box" id="WEB">
-                                <span class="course-name">Webtechnologie voor KI/INF</span>
-                                <span class="course-location">Hoorcollege, SP C1.110</span>
-                            </div>
                         </td>
                         <td></td>
                         <td></td>

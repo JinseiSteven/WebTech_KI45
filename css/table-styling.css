@@ -73,7 +73,7 @@ header {
 }
 
 .programme-wrapper tr:nth-child(odd) {
-    background-color: var(--divider-bar-color);
+    background-color: var(--main-bg-color);
 }
 
 .programme-wrapper tbody tr:last-of-type {
@@ -97,4 +97,8 @@ header {
 .programme-wrapper a:active {
     text-decoration: none;
     color: var(--main-sub-color);
+}
+
+tr {
+    color: var(--text-color-plain);
 }

@@ -10,17 +10,7 @@
     --divider-bar-color: #A8ABC4;
     --sub-text-color: #114455;
     --text-color-plain: #000000;
-
-    /* --main-bg-color: #1c1c1c;
-    --main-component-color: #292929;
-    --main-accent-color: #14ba96;
-    --main-sub-color: #64d195;
-    --main-glow-color:#84fdbb;
-    --selected-text-color: #ede7e7;
-    --divider-bar-color: #363636;
-    --sub-text-color: #0e3a49;
-    --text-color-plain: #c8c8c8; */
-
+    transition: 0.3s;
 }
 
 /* [data-theme="dark"] {

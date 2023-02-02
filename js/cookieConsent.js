@@ -57,9 +57,5 @@ const handleCookieConsent = () => {
 
 
 window.addEventListener('load', function () {
-   
-
     handleCookieConsent();
-
-    
 });

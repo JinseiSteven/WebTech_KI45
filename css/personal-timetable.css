@@ -61,9 +61,10 @@ td {
     color: var(--main-glow-color);
     font-size: 18px;
     font-weight: 600;
+    cursor: pointer;
 }
 
-.week.active {
+.week.active-week {
     background: var(--main-glow-color);
     color: var(--selected-text-color);
 }
@@ -171,4 +172,8 @@ tr td {
 
 td {
     border: 1px solid #5AAC74;
+}
+
+.period-arrow {
+    cursor: pointer;
 }
