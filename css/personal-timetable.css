@@ -57,7 +57,7 @@ td {
     width: 156px;
     height: 49px;
     border-radius: 6px;
-    background-color: #F5F6FA;
+    background-color: var(--main-bg-color);
     color: var(--main-glow-color);
     font-size: 18px;
     font-weight: 600;
