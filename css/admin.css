@@ -1,0 +1,47 @@
+.admin-container {
+    justify-content: center;
+    text-align: center;
+}
+
+.table-wrapper {
+    height:500px;
+    margin: 30px;
+    overflow:auto;  
+    margin-top:20px;
+    background-color: var(--main-component-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.30);
+}
+
+.table-wrapper th {
+    background-color: var(--divider-bar-color);
+}
+
+.table-wrapper th {
+    top: 0;
+}
+
+.table-wrapper tr:nth-child(odd) {
+    background-color: var(--main-bg-color);
+}
+
+.admin-container button {
+    background-color: #338877;
+    border: none;
+    width: 50%;
+    padding: 15px;
+    border-radius: 3px;
+    color: var(--main-component-color);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    overflow: visible;
+    margin-top: 10px;
+}
+
+.admin-container button:active {
+    filter: brightness(90%);
+    box-shadow: 0 3px var(--divider-bar-color);
+    transform: translateY(4px);
+}

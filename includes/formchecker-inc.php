@@ -162,7 +162,8 @@ class FormChecker {
     }
 
     public function pwd_strength($pwd) {
-        if (strlen($pwd) < 8 || !preg_match("#[0-9]+#", $pwd)) {
+        if (strlen($pwd) < 8 || !preg_match("#[0-9]+#", $pwd) ||
+            !preg_match("#[A-Z]+#", $pwd)) {
             $this->redirect("pwdstrength");
             exit();
         }

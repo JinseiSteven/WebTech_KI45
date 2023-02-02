@@ -50,14 +50,14 @@ include_once 'layout-head.php';
                 </div>
                 <div class="flex--row courses-content">
                     <div>
-                        <input type="checkbox" id="course-123124" name="123124" value="">
+                        <input type="checkbox" class="course" name="PAV" value="" checked>
                         <label for="123124">Academische Vaardigheden KI jaar 1</label>
                         <div>
-                            <input type="checkbox" id="course- 123124" name="123124" value="">
+                            <input type="checkbox" class="course" name="WEB" value="" checked>
                             <label for="123124">Webtechnologie voor KI/INF</label>
                         </div>
                         <div>
-                            <input type="checkbox" id="course-123124" name="123124" value="">
+                            <input type="checkbox" class="course" name="PSS" value="" checked>
                             <label for="123124">
                                 Problem Solving and Search/label>
                                 <br>
@@ -141,32 +141,32 @@ include_once 'layout-head.php';
                     </tr>
                     <tr>
                         <td>
-                            <div class="flex--column course-box">
+                            <div class="flex--column course-box" id="WEB">
                                 <span class="course-name">Webtechnologie voor KI/INF</span>
                                 <span class="course-location">Hoorcollege, SP C1.110</span>
                             </div>
 
                         </td>
                         <td>
-                            <div class="flex--column course-box">
+                            <div class="flex--column course-box" id="WEB">
                                 <span class="course-name">Webtechnologie voor KI/INF</span>
                                 <span class="course-location">Hoorcollege, SP C1.110</span>
                             </div>
                         </td>
                         <td>
-                            <div class="flex--column course-box">
+                            <div class="flex--column course-box" id="WEB">
                                 <span class="course-name">Webtechnologie voor KI/INF</span>
                                 <span class="course-location">Hoorcollege, SP C1.110</span>
                             </div>
                         </td>
                         <td>
-                            <div class="flex--column course-box">
+                            <div class="flex--column course-box" id="WEB">
                                 <span class="course-name">Webtechnologie voor KI/INF</span>
                                 <span class="course-location">Hoorcollege, SP C1.110</span>
                             </div>
                         </td>
                         <td>
-                            <div class="flex--column course-box">
+                            <div class="flex--column course-box" id="WEB">
                                 <span class="course-name">Webtechnologie voor KI/INF</span>
                                 <span class="course-location">Hoorcollege, SP C1.110</span>
                             </div>
@@ -174,7 +174,7 @@ include_once 'layout-head.php';
                     </tr>
                     <tr>
                         <td>
-                            <div class="flex--column course-box">
+                            <div class="flex--column course-box" id="WEB">
                                 <span class="course-name">Webtechnologie voor KI/INF</span>
                                 <span class="course-location">Hoorcollege, SP C1.110</span>
                             </div>

@@ -123,11 +123,6 @@
         </form>
     </div>
 </div>
-<div> 
-    <form action="post-files/timetable-post.php" method="post">
-        <button type="submit" name="submit">Enter</button>
-    </form>
-</div>
 
 <?php
     include_once 'layout-foot.php';

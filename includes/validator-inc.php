@@ -65,3 +65,7 @@ $current_page = basename($_SERVER["PHP_SELF"]);
 if (in_array($current_page, $loggedin_pages) && !validate_login()) {
     header("location: login.php");
 }
+
+if ($current_page === "admin.php" && (!isset($_SESSION["admin"]) || !$_SESSION["admin"])) {
+    header("location: overview.php");
+}

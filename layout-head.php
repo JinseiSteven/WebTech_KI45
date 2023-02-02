@@ -1,8 +1,8 @@
 <?php
 session_start();
-include_once 'cookie-popup.php';
 require_once "includes/csrf-inc.php";
 include_once 'includes/validator-inc.php';
+include_once 'cookie-popup.php';
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +28,7 @@ include_once 'includes/validator-inc.php';
     <link rel="stylesheet" href="./css/cross-animation.css">
     <link rel="stylesheet" href="./css/table-styling.css">
     <link rel="stylesheet" href="./css/edit.css">
+    <link rel="stylesheet" href="./css/admin.css">
 </head>
 
 <body>
@@ -94,7 +95,7 @@ include_once 'includes/validator-inc.php';
                                 </div>
                             </a>
                             <a href="programme-list.php">
-                                <div class="item" id="programme-list" style="pointer-events: none;">
+                                <div class="item" id="programme-list">
                                     <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_100_268)">
@@ -129,12 +130,13 @@ include_once 'includes/validator-inc.php';
 
 
                 <?php
+                if (isset($_SESSION["admin"]) && $_SESSION["admin"]) {
+                    echo "<span>ADMIN VIEW</span>";
+                }
                 if (validate_login()) {
                     echo "<form action='post-files/logout-post.php' method='post'>
                                 <button class='logout-button' type='submit' name='logout'>Logout</button>
                               </form>";
-                } else if (isset($_SESSION["admin"]) && $_SESSION["admin"]) {
-                    echo "<span>ADMIN VIEW</span>";
                 } else {
                     echo "<div class='profile-header flex--row'>
                             <img src='./assets/img/guest-icon.png' alt='profile'>
