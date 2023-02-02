@@ -112,7 +112,7 @@ include_once 'cookie-popup.php';
                                     <span href="index.html">Programme list</span>
                                 </div>
                             </a>
-                            <?php if ($_SESSION["admin"]) {?>
+                            <?php if (isset($_SESSION["admin"]) && $_SESSION["admin"]) {?>
                             <a href="admin.php">
                                 <div class="item" id="admin-page">
                                     <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
