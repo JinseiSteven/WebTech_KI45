@@ -112,8 +112,24 @@ include_once 'cookie-popup.php';
                                     <span href="index.html">Programme list</span>
                                 </div>
                             </a>
-
-
+                            <a href="admin.php">
+                                <div class="item" id="admin-page">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_100_268)">
+                                            <path
+                                                d="M19.428 13.4294C19.428 13.4294 16.6946 10.6425 12.928 10.6425C9.24762 10.6425 5.60952 13.4294 5.60952 13.4294L3.56607 12.5764V15.0788C3.8881 15.1883 4.12381 15.4847 4.12381 15.8436C4.12381 16.2061 3.88333 16.5032 3.55655 16.6103L4.16071 18.2954H2.37738L2.9869 16.596C2.69405 16.4716 2.48929 16.1823 2.48929 15.8436C2.48929 15.5121 2.6881 15.23 2.97202 15.1014V12.3282L0 11.0889L13.0768 5.21924L25.0744 11.1627L19.428 13.4294ZM12.7792 12.0544C16.5685 12.0544 18.4256 14.0603 18.4256 14.0603V18.221C18.4256 18.221 16.494 19.7811 12.4821 19.7811C8.47024 19.7811 7.13274 18.221 7.13274 18.221V14.0603C7.13274 14.0603 8.98988 12.0544 12.7792 12.0544ZM12.7048 18.8895C15.331 18.8895 17.4601 18.3567 17.4601 17.7008C17.4601 17.0448 15.331 16.5121 12.7048 16.5121C10.0786 16.5121 7.95 17.0448 7.95 17.7008C7.95 18.3567 10.0786 18.8895 12.7048 18.8895Z"
+                                                fill="#114455" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_100_268">
+                                                <rect width="25" height="25" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span>Admin</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -127,29 +143,34 @@ include_once 'cookie-popup.php';
             </div>
             <div class="profile-status flex--column">
 
-
-
                 <?php
-                if (isset($_SESSION["admin"]) && $_SESSION["admin"]) {
-                    echo "<span>ADMIN VIEW</span>";
-                }
-                if (validate_login()) {
-                    echo "<form action='post-files/logout-post.php' method='post'>
-                                <button class='logout-button' type='submit' name='logout'>Logout</button>
-                              </form>";
-                } else {
-                    echo "<div class='profile-header flex--row'>
+                if (validate_login()) { ?>
+
+                    <div class='profile-header flex--row'>
+                        <img src='<?php echo $_SESSION["userImgPath"] ?>' class="userimg" alt='profile'>
+                        <span><?php echo $_SESSION["userName"] ?></span>
+                    </div>
+                    <span id='profile-subheader'><?php echo $_SESSION["userStudentID"];
+                        if (isset($_SESSION["admin"]) && $_SESSION["admin"]) {
+                            echo "<span id='admin'>ADMIN VIEW</span>";
+                        } ?></span>
+                    <div class='guest-login-btns flex--row'>
+                        <form action='post-files/logout-post.php' method='post'>
+                            <button class='logout-button' type='submit' name='logout'>Logout</button>
+                        </form>
+                        <button class="userbutton"><a href='edit.php'>Edit Profile</a></button>
+                    </div>
+                <?php } else { ?>
+                    <div class='profile-header flex--row'>
                             <img src='./assets/img/guest-icon.png' alt='profile'>
                             <span>Guest account</span>
                         </div>
                         <span id='profile-subheader'>Login to access personalized data!</span>
                         <div class='guest-login-btns flex--row'>
-                            <button><a href='login.php'>Login</a></button>
-                            <button><a href='signup.php'>Register</a></button>
+                            <button class="userbutton"><a href='login.php'>Login</a></button>
+                            <button class="userbutton"><a href='signup.php'>Register</a></button>
                         </div>
-                        ";
-                }
-                ?>
+                <?php } ?>
 
             </div>
         </div>

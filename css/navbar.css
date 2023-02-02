@@ -101,7 +101,7 @@
     margin-top: 10px;
 }
 
-.guest-login-btns button {
+.guest-login-btns .userbutton {
     width: 50%;
     height: 30px;
     border-radius: 4px;
@@ -112,9 +112,8 @@
     transition: 0.3s;
 }
 
-.guest-login-btns button:hover {
+.guest-login-btns button:hover{
     scale: 1.05;
-    color: white;
 }
 
 .guest-login-btns button a {
@@ -130,6 +129,39 @@
     font-size: 20px;
     font-weight: 600;
 
+}
+
+.guest-login-btns form{
+    width: 50%;
+}
+
+.guest-login-btns button{
+    width: 95%;
+    height: 30px;
+    border-radius: 4px;
+    background-color: white;
+    color: #338877;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.3s;
+    text-decoration: none;
+    color: #338877;
+    font-weight: 700;
+}
+
+.userimg {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#admin {
+    font-size: 12px;
+    font-weight: 1000;
+    color: #ae0000;
+    margin-left: 85px;
 }
 
 .color-mode-box {
