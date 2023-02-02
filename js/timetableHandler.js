@@ -1,4 +1,4 @@
-const host = window.location.host;
+const host = 'https://webtech-ki45.webtech-uva.nl';
 
 
 const periodWeeks = [
@@ -283,7 +283,7 @@ const updateDates = (beginDate, endDate) => {
 // date format is YYYY-MM-DD
 const fetchTimetable = async (userID, beginDate, endDate) => {
     updateDates(beginDate, endDate);
-    url = `http://${host}/WebTech_KI45/post-files/timetable-post.php?userID=${userID}&beginDate=${beginDate}&endDate=${endDate}`;
+    url = `https://${host}/post-files/timetable-post.php?userID=${userID}&beginDate=${beginDate}&endDate=${endDate}`;
     const response = await fetch(url, {
         "headers": {
           "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
