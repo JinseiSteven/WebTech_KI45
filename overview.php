@@ -8,7 +8,7 @@ include_once 'layout-head.php';
     <div class="flex--column wrapper--left">
         <div class="flex--column section-header ">
             <span class="header">Hi,
-                <?php echo $_SESSION['userName'] ?> 👋
+                <?php echo $_SESSION["userName"] ?> 👋
             </span>
             <span class="subheader">Welcome back to your personal calendar!</span>
         </div>
@@ -37,9 +37,15 @@ include_once 'layout-head.php';
                     </span>
                 </div>
             </div>
+            <div class="flex--column avg-gpa-box">
+                <span class="box--header">Motivational Quote</span>
+                <blockquote>
+                    &ldquo;<span id="quote">&rdquo; &mdash; </span>
+                    <footer id="author">
+                    </footer>
+                </blockquote>
+            </div>
         </div>
-
-
         <div class="courses--box">
             <span class="box--header">Courses</span>
             <div class="flex--row courses">
@@ -55,14 +61,6 @@ include_once 'layout-head.php';
             </div>
         </div>
     </div>
-    <!--<div class="flex--column wrapper--right">
-         <div class="attendance--box">
-            <span class="box--header">Attendance</span>
-            <div class="attendance--content">
-                cool
-            </div>
-        </div>
-    </div> -->
 </div>
 
 

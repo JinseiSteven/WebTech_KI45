@@ -21,7 +21,7 @@ if (isset($_GET["userID"]) && isset($_GET["beginDate"]) && isset($_GET["endDate"
     $sql = "SELECT classes.className, seminars.seminarLocation, 
             seminars.seminarStartTime, seminars.seminarEndTime, 
             seminars.seminarDate, seminars.seminarType 
-            FROM seminars 
+            FROM seminars
             INNER JOIN classes ON classes.classID=seminars.classID
             WHERE seminars.classID in ($userclasses) 
             AND seminars.seminarDate BETWEEN ? AND ? 
@@ -42,6 +42,7 @@ if (isset($_GET["userID"]) && isset($_GET["beginDate"]) && isset($_GET["endDate"
     // returning the results in the form of an associative array
     $resultData = mysqli_stmt_get_result($stmt);
 
+    // formatting the output so it's easily parseable
     if ($data = mysqli_fetch_assoc($resultData)) {
         echo '[' .json_encode( $data);
         while ($data = mysqli_fetch_assoc($resultData)) {

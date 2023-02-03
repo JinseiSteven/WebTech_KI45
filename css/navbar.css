@@ -165,6 +165,19 @@
     margin-left: 85px;
 }
 
+#admin-page {
+    background-color: #f64242;
+    color: var(--selected-text-color);
+}
+
+#admin-page:hover {
+    background-color: #650000;
+}
+
+#admin-page svg g path {
+    fill: var(--selected-text-color);
+}
+
 .color-mode-box {
     display: flex;
     flex-direction: row;

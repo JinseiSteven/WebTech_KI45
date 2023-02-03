@@ -33,7 +33,7 @@ if (isset($_POST["submit"])) {
 
     // if the check succeeds, updates the users data
     if ($formchecker->check_edit($name, $studentID, $email, $image) === true) {
-        
+    
         // before adding any new data, check if the studentID is already taken
         if ($userhandler->get_user_data("userStudentID", $studentID) !== false &&
             $studentID != $_SESSION["userStudentID"]) {
@@ -50,7 +50,7 @@ if (isset($_POST["submit"])) {
             $imgpath = "assets/userimg/" . $_SESSION["userID"] . "." . $extension;
             move_uploaded_file($img_file, "../" . $imgpath);
         }
- 
+
         $userhandler->edit($_SESSION["userID"], $name, $studentID, $email, $imgpath);
     }
 
@@ -59,7 +59,6 @@ if (isset($_POST["submit"])) {
         header("location: ../edit.php");
         exit();
     }
-
 }
 
 // if the user has not correctly posted the form, send back to edit page

@@ -7,4 +7,5 @@
 <script src="./js/cookieConsent.js"></script>
 <script src="./js/themeSwitcher.js"></script>
 <script src="./js/timetableHandler.js"></script>
+<script src="./js/quoteGenerator.js"></script>
 </body>

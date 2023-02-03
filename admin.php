@@ -8,16 +8,15 @@
     <table>
         <thead>
             <tr>
-                <th><div class="head">ID</div></th>
                 <th><div class="head">Name</div></th>
                 <th><div class="head">StudentID</div></th>
                 <th><div class="head">Email</div></th>
                 <th><div class="head">Admin</div></th>
                 <th><div class="head"></div></th>
+                <th><div class="head"></div></th>
             </tr>
         </thead>
     </table>
-    <form action="#" method="post">
     <div class="table-wrapper"> 
         <table>
             <thead>
@@ -34,8 +33,9 @@
         name="csrf_token"
         value=""
         >
-    <button type="submit" name="submit">Delete</button>
     </form>
+    <script src="./js/deleteuser.js"></script>
+    <script src="./js/toggleAdmin.js"></script>
 </div>
 
 <?php

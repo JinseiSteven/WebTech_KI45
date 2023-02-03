@@ -45,3 +45,39 @@
     box-shadow: 0 3px var(--divider-bar-color);
     transform: translateY(4px);
 }
+
+.delete-button {
+    background-color: #732424;
+    border: none;
+    width: 50%;
+    padding: 10px;
+    border-radius: 3px;
+    color: var(--main-component-color);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    overflow: visible;
+    margin-top: 10px;
+}
+
+.admin-button {
+    background-color: #7d790b;
+    border: none;
+    width: 50%;
+    padding: 10px;
+    border-radius: 3px;
+    color: var(--main-component-color);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    overflow: visible;
+    margin-top: 3px;
+}
+
+#admin-row {
+    background-color: #fcf895;
+}

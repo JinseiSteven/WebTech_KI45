@@ -17,6 +17,7 @@ include_once 'cookie-popup.php';
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <meta name="csrf_token" content="<?php echo generate_csrf() ?>">
+    <script src="jquery-3.6.3.min.js"></script>
     <title>Datanose++</title>
     <link rel="stylesheet" href="./css/globals.css">
     <link rel="stylesheet" href="./css/navbar.css">
@@ -128,7 +129,7 @@ include_once 'cookie-popup.php';
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                    <span>Admin</span>
+                                    <span>Admin Page</span>
                                 </div>
                             </a>
                             <?php } ?>
