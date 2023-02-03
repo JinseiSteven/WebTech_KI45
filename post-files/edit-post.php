@@ -4,7 +4,14 @@
 if (isset($_POST["submit"])) {
     $name = strip_tags($_POST["name"] . " " . $_POST["surname"]);
     $studentID = strip_tags($_POST["studentID"]);
-    $email = strip_tags($_POST["email"]);
+
+    // email is not neccessary, so set to NULL if none are entered
+    if (isset($_POST["email"]) && !empty($_POST["email"])){
+        $email = strip_tags($_POST["email"]);
+    }
+    else {
+        $email = NULL;
+    }
 
 
     // establishing a connection to the database

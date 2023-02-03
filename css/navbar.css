@@ -159,10 +159,12 @@
 }
 
 #admin {
+    display: block;
     font-size: 12px;
     font-weight: 1000;
     color: #ae0000;
-    margin-left: 85px;
+    margin-right: 10px;
+    float: right;
 }
 
 #admin-page {
