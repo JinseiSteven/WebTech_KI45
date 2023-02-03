@@ -1,4 +1,4 @@
-const host = 'https://webtech-ki45.webtech-uva.nl';
+const host = 'webtech-ki45.webtech-uva.nl';
 
 
 const periodWeeks = [
@@ -263,7 +263,6 @@ const updateDates = (beginDate, endDate) => {
         for(let j = 1; j < rows.length; j++){
             let row = rows[j];
             let cells = row.querySelectorAll('td');
-            console.log(beginDay)
             cells[i].setAttribute('data-date', `${beginDate.split('-')[0]}-${beginDate.split('-')[1]}-${String(beginDay).length == 1 ? '0' + beginDay : beginDay}`);
 
         }

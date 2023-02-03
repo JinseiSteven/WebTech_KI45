@@ -32,7 +32,7 @@ const handleCookieConsent = () => {
 
     // Check if cookie is set
     let cookiesValue = getCookieValue('cookieConsent');
-    console.log(cookiesValue)
+    
     // not null means we already set the cookie, true or false
     if (cookiesValue !== null) {
         cookieOverlay.classList.add('hidden');

@@ -111,7 +111,7 @@ class UserHandler
         $_SESSION['userImgPath'] = $userdata["userImgPath"];
         $_SESSION["admin"] = $userdata["admin"];
 
-        header("location: ../overview.php");
+        header("location: ../index.php");
         exit();
     }
 
@@ -149,7 +149,7 @@ class UserHandler
         $_SESSION['userImgPath'] = $imagepath;
 
         // redirecting the user to the overview page
-        header("location: ../overview.php");
+        header("location: ../index.php");
         exit();
     }
 
@@ -185,7 +185,7 @@ class UserHandler
         mysqli_stmt_close($stmt);
 
         // redirecting the user to the overview page
-        header("location: ../overview.php");
+        header("location: ../index.php");
         exit();
     }
 }

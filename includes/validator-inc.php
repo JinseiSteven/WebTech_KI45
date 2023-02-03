@@ -7,7 +7,7 @@
  */ 
 function validate_login() {
 
-    require "dbh-inc.php";
+    require "../dbh-inc.php";
     require_once "cookiehandler-inc.php";
     require_once "userhandler-inc.php";
 
@@ -59,7 +59,7 @@ function validate_login() {
 }
 
 
-$loggedin_pages = array("overview.php", "edit.php");
+$loggedin_pages = array("index.php", "edit.php");
 // sending users to the login page from pages where login is needed
 $current_page = basename($_SERVER["PHP_SELF"]);
 if (in_array($current_page, $loggedin_pages) && !validate_login()) {
@@ -67,5 +67,5 @@ if (in_array($current_page, $loggedin_pages) && !validate_login()) {
 }
 
 if ($current_page === "admin.php" && (!isset($_SESSION["admin"]) || !$_SESSION["admin"])) {
-    header("location: overview.php");
+    header("location: index.php");
 }
