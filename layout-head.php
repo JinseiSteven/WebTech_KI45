@@ -42,7 +42,7 @@ include_once 'cookie-popup.php';
             <div class="section">
                 <div class="header">Home</div>
                 <div class="flex--column nav-bar--items ">
-                    <a href="overview.php">
+                    <a href="index.php">
                         <div class="item" id="dash-wrapper">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">

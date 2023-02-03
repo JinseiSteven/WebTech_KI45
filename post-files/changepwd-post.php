@@ -7,7 +7,7 @@ if (isset($_POST["submit"])) {
     $newpwdrpt = strip_tags($_POST["newpwdrpt"]);
 
     // establishing a connection to the database
-    require_once "../includes/dbh-inc.php";
+    require_once "../../dbh-inc.php";
     require_once "../includes/userhandler-inc.php";
     require_once "../includes/formchecker-inc.php";
     require_once "../includes/csrf-inc.php";

@@ -3,7 +3,7 @@ session_start();
 
 if (isset($_POST["logout"]) && !empty($_SESSION["userID"])) {
 
-    require_once "../includes/dbh-inc.php";
+    require_once "../../dbh-inc.php";
     require_once "../includes/cookiehandler-inc.php";
 
     // removing the cookies
@@ -15,5 +15,5 @@ if (isset($_POST["logout"]) && !empty($_SESSION["userID"])) {
     header("location: ../login.php");
 }
 else {
-    header("location: ../overview.php");
+    header("location: ../index.php");
 }

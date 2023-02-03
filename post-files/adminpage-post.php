@@ -3,16 +3,15 @@
 // only an admin can view this page
 if (isset(($_SESSION["admin"])) && $_SESSION["admin"]) {
 
-    require "includes/dbh-inc.php";
-    
-    // get all userdata
+    require "../dbh-inc.php";
+
     $sql = "SELECT `userID`, `userName`, `userStudentID`, `userEmail`, `admin` FROM users";
 
     $stmt = mysqli_stmt_init($conn);
     
     // checking whether the sql-statement preparation succeeds
     if (mysqli_stmt_prepare($stmt, $sql) !== true) {
-        header("location: ../overview.php?error=failedstmt");
+        header("location: ../index.php?error=failedstmt");
         exit();
     }
 

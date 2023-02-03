@@ -8,7 +8,7 @@ if (isset($_GET["userID"]) && isset($_GET["beginDate"]) && isset($_GET["endDate"
     $endDate = $_GET["endDate"];
 
     // establishing a connection to the database
-    require_once "../includes/dbh-inc.php";
+    require_once "../../dbh-inc.php";
 
     // initialising and preparing the sql-statement, to prevent sql-injections
     // sql-statement for getting the users classes
