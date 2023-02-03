@@ -4,15 +4,20 @@ const getFormattedDate = () => {
     var day = dateObj.getUTCDate();
     var year = dateObj.getUTCFullYear();
     
-    formattedDate = year + "/" + month + "/" + day;
+    let formattedDate = year + "/" + month + "/" + day;
     return formattedDate;
 }
 
-window.addEventListener('load', async function async() {
+window.addEventListener('load', function() {
     // load quote date and current quote from localstorage
     // if its not set fetch a new quote and store it in local storage
     // if its set but setdate doenst equal current date set a new one
 
+    handleQuote();
+    
+})
+
+const handleQuote = async () => {
     let quoteData = window.localStorage.getItem('quote')
     
     
@@ -23,13 +28,14 @@ window.addEventListener('load', async function async() {
     }  else {
         return setQuote(quoteData.author, quoteData.value)
     }
-    
-})
+}
+
+
 
 
 
 const fetchNewQuote = async () => {
-    var quote_json = fetch("https://zenquotes.io/api/random", {
+    var quote_json = await fetch("https://zenquotes.io/api/random", {
         "headers": {
           "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
           "accept-language": "en-US,en;q=0.9,nl;q=0.8,fr;q=0.7",

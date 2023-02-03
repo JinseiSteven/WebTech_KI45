@@ -1,5 +1,12 @@
 <?php
 session_start();
+
+header('Access-Control-Allow-Origin: *');
+
+header('Access-Control-Allow-Methods: GET, POST');
+
+header("Access-Control-Allow-Headers: X-Requested-With");
+
 require_once "../csrf-inc.php";
 include_once 'includes/validator-inc.php';
 include_once 'cookie-popup.php';
@@ -193,12 +200,16 @@ include_once 'cookie-popup.php';
 
                     <div class='profile-header flex--row'>
                         <img src='<?php echo $_SESSION["userImgPath"] ?>' class="userimg" alt='profile'>
-                        <span><?php echo $_SESSION["userName"] ?></span>
+                        <span>
+                            <?php echo $_SESSION["userName"] ?>
+                        </span>
                     </div>
-                    <span id='profile-subheader'><?php echo $_SESSION["userStudentID"];
+                    <span id='profile-subheader'>
+                        <?php echo $_SESSION["userStudentID"];
                         if (isset($_SESSION["admin"]) && $_SESSION["admin"]) {
                             echo "<span id='admin'>ADMIN VIEW</span>";
-                        } ?></span>
+                        } ?>
+                    </span>
                     <div class='guest-login-btns flex--row'>
                         <form action='post-files/logout-post.php' method='post'>
                             <button class='logout-button' type='submit' name='logout'>Logout</button>
@@ -207,14 +218,14 @@ include_once 'cookie-popup.php';
                     </div>
                 <?php } else { ?>
                     <div class='profile-header flex--row'>
-                            <img src='./assets/img/guest-icon.png' alt='profile'>
-                            <span>Guest account</span>
-                        </div>
-                        <span id='profile-subheader'>Login to access personalized data!</span>
-                        <div class='guest-login-btns flex--row'>
-                            <button class="userbutton"><a href='login.php'>Login</a></button>
-                            <button class="userbutton"><a href='signup.php'>Register</a></button>
-                        </div>
+                        <img src='./assets/img/guest-icon.png' alt='profile'>
+                        <span>Guest account</span>
+                    </div>
+                    <span id='profile-subheader'>Login to access personalized data!</span>
+                    <div class='guest-login-btns flex--row'>
+                        <button class="userbutton"><a href='login.php'>Login</a></button>
+                        <button class="userbutton"><a href='signup.php'>Register</a></button>
+                    </div>
                 <?php } ?>
 
             </div>
