@@ -5,7 +5,7 @@
 
 .table-wrapper {
     height:500px;
-    margin: 30px;
+    margin: 15px;
     overflow:auto;  
     margin-top:20px;
     background-color: var(--main-component-color);
@@ -79,5 +79,5 @@
 }
 
 #admin-row {
-    background-color: #fcf895;
+    background-color: #adaa4f;
 }

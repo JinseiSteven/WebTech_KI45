@@ -2,8 +2,8 @@
     if (isset($_POST["userID"])) {
         $userID = intval($_POST["userID"]);
 
-        require_once "../includes/dbh-inc.php";
-        require_once "../includes/csrf-inc.php";
+        require_once "../../dbh-inc.php";
+        require_once "../../csrf-inc.php";
 
         // first we check the csrf-token to stop malicious post requests
         if (!isset($_POST["csrf"]) || !validate_csrf($_POST["csrf"])) {
@@ -12,7 +12,7 @@
         }
 
         $sql = "UPDATE users SET `admin` = 
-                CASE WHEN `admin` = 1 THEN 0 
+                CASE WHEN `admin` = 1 THEN 0
                 ELSE 1 END
                 WHERE userID = ?;";
         $stmt = mysqli_stmt_init($conn);

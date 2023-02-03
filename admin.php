@@ -33,7 +33,6 @@
         name="csrf_token"
         value=""
         >
-    </form>
     <script src="./js/deleteuser.js"></script>
     <script src="./js/toggleAdmin.js"></script>
 </div>

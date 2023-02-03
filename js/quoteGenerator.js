@@ -8,7 +8,7 @@ const getFormattedDate = () => {
     return formattedDate;
 }
 
-window.addEventListener('load', function async() {
+window.addEventListener('load', async function async() {
     // load quote date and current quote from localstorage
     // if its not set fetch a new quote and store it in local storage
     // if its set but setdate doenst equal current date set a new one
@@ -16,7 +16,7 @@ window.addEventListener('load', function async() {
     let quoteData = window.localStorage.getItem('quote')
     
     
-    if(quoteData.date !== getFormattedDate() || quoteData === undefined){ 
+    if(!quoteData || quoteData.date !== getFormattedDate() || quoteData === undefined){ 
         let data = await fetchNewQuote()
         return setQuote(data.author, quoteData.value)
 

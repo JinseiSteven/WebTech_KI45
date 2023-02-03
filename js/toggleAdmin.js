@@ -26,9 +26,11 @@ $(document).ready(function(){
                     if (response == 'success'){
                         if ($(userRow).closest('tr').attr("id") == "admin-row") {
                             $(userRow).closest('tr').attr("id", "");
+                            Nosifier.info('User admin privileges removed!');
                         }
                         else {
                             $(userRow).closest('tr').attr("id", "admin-row");
+                            Nosifier.info('User is now an admin!');
                         }
                     }
                     else {

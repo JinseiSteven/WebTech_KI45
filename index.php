@@ -1,7 +1,10 @@
 <?php
 include_once 'layout-head.php';
+include_once 'includes/gradeCalc-inc.php';
 
 /* Content for the page below */
+
+list($EC, $GPA) = grade_info($_SESSION["userID"]);
 ?>
 
 <div class="flex--row content-wrapper dash-wrapper active">
@@ -26,14 +29,14 @@ include_once 'layout-head.php';
                             echo $_SESSION['userEmail'];
                         } ?>
                     </span>
-                    <span class="profile-data--ec">24 EC</span>
+                    <span class="profile-data--ec"><?php echo $EC ?> EC</span>
                 </div>
             </div>
             <div class="flex--column avg-gpa-box">
                 <span class="box--header">Average GPA</span>
                 <div class="avg-gpa-box--gpa">
                     <span>
-                        7.56
+                        <?php echo $GPA ?>
                     </span>
                 </div>
             </div>

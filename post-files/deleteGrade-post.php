@@ -1,6 +1,7 @@
 <?php 
-    if (isset($_POST["userID"])) {
-        $userID = intval($_POST["userID"]);
+
+    if (isset($_POST["gradeID"])) {
+        $gradeID = intval($_POST["gradeID"]);
 
         require_once "../../dbh-inc.php";
         require_once "../../csrf-inc.php";
@@ -10,8 +11,8 @@
             echo 'ERROR: invalid csrf-token';
             exit();
         }
-
-        $sql = "DELETE FROM users WHERE userID = ?;";
+        
+        $sql = "DELETE FROM grades WHERE gradeID = ?;";
         $stmt = mysqli_stmt_init($conn);
 
         // checking whether the sql-statement preparation succeeds
@@ -21,7 +22,7 @@
         }
 
         // binding the paramaters to the sql-statement and executing it
-        mysqli_stmt_bind_param($stmt, "i", $userID);
+        mysqli_stmt_bind_param($stmt, "i", $gradeID);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
 
@@ -29,6 +30,6 @@
         exit();
     }
 
-    echo 'ERROR: userID not set';
+    echo 'ERROR: gradeID not set';
     exit();
 ?>

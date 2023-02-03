@@ -59,13 +59,15 @@ function validate_login() {
 }
 
 
-$loggedin_pages = array("index.php", "edit.php");
+$loggedin_pages = array("index.php", "edit.php", "grades.php");
+
 // sending users to the login page from pages where login is needed
 $current_page = basename($_SERVER["PHP_SELF"]);
 if (in_array($current_page, $loggedin_pages) && !validate_login()) {
     header("location: login.php");
 }
 
+// only admins can navigate to the admin page
 if ($current_page === "admin.php" && (!isset($_SESSION["admin"]) || !$_SESSION["admin"])) {
     header("location: index.php");
 }

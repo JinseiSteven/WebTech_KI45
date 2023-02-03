@@ -11,7 +11,6 @@ if (isset(($_SESSION["admin"])) && $_SESSION["admin"]) {
     
     // checking whether the sql-statement preparation succeeds
     if (mysqli_stmt_prepare($stmt, $sql) !== true) {
-        header("location: ../index.php?error=failedstmt");
         exit();
     }
 

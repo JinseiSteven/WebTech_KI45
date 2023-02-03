@@ -11,11 +11,15 @@ include_once 'layout-head.php';
     }
 ?>
 
+<div class="flex--column section-header">
+        <span class="header">Edit Profile</span>
+</div>
 <div class="flex--row edit-container">
     <?php
     include_once "includes/errors-inc.php";
     ?>
-    <div class="profile-settings-box">
+    <div class="flex--column profile-settings-box">
+        <h2>Profile Settings</h2>
         <form action="post-files/edit-post.php" class="flex--column" enctype="multipart/form-data" method="post">
             <input type="hidden" name="csrf_token" value="">
             <div class="flex--row">
@@ -56,7 +60,7 @@ include_once 'layout-head.php';
         </form>
     </div>
     <div class="flex--column password-change-box">
-        <h3>Change Password</h3>
+        <h2>Change Password</h2>
         <form action="post-files/changepwd-post.php" class="flex--column" method="post">
             <input type="hidden" name="csrf_token" value="">
             <label for="pwd">

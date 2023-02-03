@@ -18,7 +18,7 @@ if (isset($_POST["submit"])) {
     require_once "../../dbh-inc.php";
     require_once "../includes/userhandler-inc.php";
     require_once "../includes/formchecker-inc.php";
-    require_once "../includes/csrf-inc.php";
+    require_once "../../csrf-inc.php";
 
     // first we check the csrf-token to stop malicious post requests
     if (!isset($_POST["csrf_token"]) || !validate_csrf($_POST["csrf_token"])) {
