@@ -41,11 +41,11 @@ list($EC, $GPA) = grade_info($_SESSION["userID"]);
                 </div>
             </div>
             <div class="flex--column avg-gpa-box">
-                <span class="box--header">Motivational Quote</span>
+                <span class="box--header">Random math fact</span>
                 <blockquote>
-                    &ldquo;<span id="quote">&rdquo; &mdash; </span>
-                    <footer id="author">
-                    </footer>
+                    <span id="quote"><?php
+                        $quote=file_get_contents("http://numbersapi.com/random/math");
+                        echo $quote; ?></span>
                 </blockquote>
             </div>
         </div>
